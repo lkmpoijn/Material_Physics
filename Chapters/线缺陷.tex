@@ -329,7 +329,39 @@
                     \item[3] 因此混合型可以分解为螺型与刃型分量分别计算并叠加。
                 \end{itemize}
         \section{位错的应变能}
+            前一章已经求出位错的应力场和畸变分布，可以得到，晶体中弹性能量密度为
+            \begin{equation}
+                \frac{1}{2}\sigma_{ij}\varepsilon-{ij},
+            \end{equation}
+            由于位错的应力场分为两部分来求解，因此对于位错能量也分为两部分，一部分为位错的核心能量，一部分为周围应力场的能量，也就是应变能，
+            利用弹性能量密度，可以得到单位立方体总的应变能
+            \begin{equation}
+                w=\frac{1}{2}\left(\sigma_{x} \varepsilon_{x}+\sigma_{y} \varepsilon_{y}+\sigma_{z} \varepsilon_{z}+\tau_{x y} \gamma_{x y}+\tau_{y z} \gamma_{y z}+\tau_{z x} \gamma_{z x}\right),
+            \end{equation}
+            整个弹性题的应变能为
+            \begin{equation}
+                W=\frac{1}{2}\iiint\sigma\varepsilon\dif v,
+            \end{equation}
+            但是这一过程非常复杂，求解难度很大。然而采用做功法，利用位错的形成过程，计算这个过程中所做的功，也就是系统能量的增加。
+
+            \subsection{刃型位错的应变能}
+            \subsection{螺型位错的应变能}
+            \subsection{混合型位错的应变能}
+
         \section{位错的线张力}
+            已知位错的能量与它的长度成正比，若要增加位错的长度，必须做功，因此，围殴错总是有收缩其长度的趋势，
+            这表明在能量的意义上将，位错线表现有线张力。可以定义位错线张力等于位错线伸长一个单位长度所做的功，
+            用$T$表示。一个直位错的张力等于
+            \begin{equation}
+                \begin{aligned}
+                    T&=\frac{\partial W}{\partial l}\\
+                    &=\frac{\mu b^{2} \sin ^{2} \psi}{4 \pi(1-v)} \ln \left(\frac{r_{1}}{r_{0}}\right)\left(1-v \cos ^{2} \psi\right)\\
+                    &\simeq \frac{1}{2}\mu b^2.
+                \end{aligned}
+            \end{equation}
+            但是，位错的张力多少和位错的形状有关，上式所指的是直的位错。对于一般波
+            浪形的位错，其张力基本上也可以用式，证明从略。故在以后的应用中均用此公式表
+            示位错的线张力。
         \section{位错核心}
         \section{位错的受力与运动}
         \section{位错与晶体缺陷间的相互作用}
