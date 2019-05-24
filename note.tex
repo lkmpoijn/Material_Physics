@@ -1,0 +1,165 @@
+% !TEX program = xelatex
+\documentclass[12pt]{book}
+\usepackage{ctex}
+\usepackage{import}
+\usepackage{authblk}
+\usepackage{amsmath}
+\usepackage{graphicx} 
+\usepackage{geometry}
+\geometry{a4paper,scale=0.8}
+\def\celsius{\ensuremath{^\circ\hspace{-0.09em}\mathrm{C}}}
+\numberwithin{equation}{section}
+\usepackage{tabu}
+\usepackage{booktabs}
+\usepackage[numbers,sort&compress]{natbib}
+\newcommand*{\dif}{\mathop{}\!\mathrm{d}}
+\usepackage{caption}
+\usepackage[section]{placeins}
+\usepackage{float}
+\usepackage{placeins}
+\DeclareTextFontCommand{\emph}{\bfseries}
+\usepackage{verbatim}
+\usepackage{amsmath,amssymb}
+\usepackage{inputenc}
+\usepackage{xeboiboites}
+\usepackage{verbatim}
+\usepackage{amsmath,amssymb}
+\usepackage{braket}
+\usepackage{siunitx}
+\sisetup{range-phrase = --}
+\usepackage{tikz}
+\usetikzlibrary{intersections}
+\usepackage{pstricks}
+\usepackage{makeidx}
+\usepackage{subfigure}
+%\usepackage{subfig}
+\makeindex
+%\usepackage{microtype}
+
+%\usepackage{lipsum}
+%opening
+\title{材料物理}
+\author{Wenshan Bai}
+\date{\today}
+
+\DeclareTextFontCommand{\emph}{\bfseries}
+
+
+\newboxedtheorem[
+small box style={fill=gray!20,draw=black, rounded corners},
+big box style={fill=gray!10,draw=orange,thick,rounded corners},
+headfont=\bfseries,
+thcounter=section]{define*}{Definition}{}
+
+\newboxedtheorem[
+small box style={fill=gray!20,draw=black, rounded corners},
+big box style={fill=gray!10,draw=orange,thick,rounded corners},
+headfont=\bfseries,
+thcounter=subsection]{define}{Definition}{definecounter}
+
+\newbreakabletheorem[small box style={draw=orange,fill=blue!20},
+big box style={fill=blue!10,draw=orange}]
+{theorem}{Theorem}{theoremcounter}
+\newbreakabletheorem[small box style={draw=orange,fill=blue!20},
+big box style={fill=blue!30,draw=orange}]
+{theorem*}{Theorem}{}
+\newbreakabletheorem[small box style={fill=white!20,draw=black, 
+	rounded corners},
+big box style={fill=white!10,draw=orange,thick,rounded corners},
+headfont=\bfseries,
+broken edges={draw=orange!30!black!20,thick,fill=orange!20!black!5, 
+	decoration={random steps, segment length=.5cm,%
+		amplitude=1.3mm},decorate},%
+other edges={decoration=penciline,decorate,thick}]%
+{example}{Example}{examplecounter}    
+\newboxedtheorem[small box style={fill=blue!20,draw=black, 
+	rounded corners},
+big box style={fill=blue!10,draw=orange,thick,rounded corners},
+headfont=\bfseries]%
+{example*}{Example}{}  
+
+\newboxedtheorem[small box style={fill=blue!10,draw=black, line width=.7pt,
+	decoration={penciline},decorate},%
+big box style={fill=blue!10,draw=black,thick, 
+	decoration={penciline},decorate},
+headfont=\bfseries]%
+{Proof}{Proof}{}
+
+
+\newboxedequation[big box style={fill=blue!10,%
+	thick,decoration=penciline,decorate}]%
+{formula}      
+
+
+
+\newbreakabletheorem[small box style={draw=orange,fill=blue!20},
+big box style={fill=blue!10,draw=orange},
+broken edges={decoration=zigzag}]
+{propd}{Proposition}{test}    
+
+\newbreakabletheorem[small box style={draw=orange!30!black!20,%
+	fill=orange!10!black!2,decoration=penciline, decorate, thick},
+big box style={color=orange!30!black!20,fill=orange!30!black!10,thick},
+broken edges={draw=orange!30!black!20,thick,fill=orange!20!black!5, 
+	decoration={random steps, segment length=.5cm,%
+		amplitude=1.3mm},decorate},%
+other edges={decoration=penciline,decorate,thick}]%
+{parchment}{Parchment}{test}    
+
+\newparchment[small box style={draw=orange!30!black!20,%
+	fill=orange!10!black!2,decoration=penciline, decorate, thick},
+big box style={color=orange!30!black!20,fill=orange!30!black!10,thick},
+broken edges={draw=orange!30!black!20,thick,fill=orange!20!black!5, 
+	decoration={random steps, segment length=.4cm,%
+		amplitude=1.7mm},decorate},%
+other edges={decoration=penciline,decorate,thick}]%
+{parchmentb}{Parchment}{}     
+
+\newspanning[image=dessins/bulb,headfont=\bfseries,%
+spanning style={very thick,decoration=penciline,decorate}]%
+{method}{Method}{}
+
+\newspanning[image=dessins/poisson,headfont=\itshape,%
+spanning style={very thick,decoration=penciline,decorate}]%
+{test}{Test}{}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+%\renewcommand\subfigureautorefname{图}
+\renewcommand\figureautorefname{图}
+\renewcommand\tableautorefname{表}
+\renewcommand\equationautorefname{式}
+\usepackage{cleveref}
+\begin{document}
+
+\maketitle
+
+
+
+\tableofcontents
+\addcontentsline{toc}{chapter}{目录}
+
+\clearpage
+\chapter*{前言}
+	本笔记内容来自材料物理课程材料整理。
+
+
+\part{晶体缺陷}
+	\input{Chapters/点缺陷.tex}
+	\input{Chapters/线缺陷.tex}
+	\input{Chapters/晶粒边界.tex}
+\part{性能强化}
+	\input{Chapters/晶体的范性变形.tex}
+\part{固溶体、扩散与相变}
+	\input{Chapters/固溶体.tex}
+	\input{Chapters/扩散.tex}
+	\input{Chapters/相变.tex}
+\part{考试内容}
+	\input{Chapters/复习题.tex}
+\printindex
+\end{document}
