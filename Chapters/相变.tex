@@ -329,8 +329,135 @@
             如果所有界面都不共格，称为\textbf{非共格}\index{非共格}新相。
 
             
-    \section{非均匀形核（界面形核）}
+        \subsection{非均匀形核（界面形核）}
+            形核过程若没有择优地点而称为均匀形核。实际上在金属或合金中，总是存在着界面、位错、夹杂等缺陷，因而
+            成为非均匀的择优形核地点。主要是因为在缺陷处存在着畸变，在界面或缺陷处形核，可以消除缺陷，松弛部分能量，从而可以降低形核功。
+
+            以锭模内表面的钢水凝固为例，在界面上形成球冠状的晶核，则有三种界面能$\gamma_{LS}$、$\gamma_{LC}$以及$\gamma_{SC}$，
+            分别为液固界面能、液体锭模内壁界面能、固体锭模内壁界面能。达到平衡时，具有接触角，在水平上有
+            \begin{equation}
+                \gamma_{LC}=\gamma_{SC}+\gamma_{LS}\cos\theta\label{晶核形核过程中的力学平衡},
+            \end{equation}
+            这里不考虑$\gamma_{LS}$的垂直分量，它与锭模及晶核内聚力平衡，与此处无关系。
+
+            假设晶核的曲率半径为$r$，晶核与锭模的接触面积为$A_1$，则
+            \begin{equation}
+                A_1=\pi\left( r\sin\theta \right)^2=\pi\cdot r^2\sin^2\theta,
+            \end{equation}
+            晶核与液体的接触面积为$A_2$，
+            \begin{equation}
+                A_2=2\pi\cdot r^2(1-\cos\theta),
+            \end{equation}
+            晶核的体积$V$为
+            \begin{equation}
+                V=\pi\cdot r^3\frac{2-3\cos\theta+\cos^3\theta}{3},
+            \end{equation}
+            形核之前，界面能为
+            \begin{equation}
+                \gamma_{LC}\cdot A_1=\gamma_{LC}\pi r^2\sin^2\theta,
+            \end{equation}
+            形核后，界面能为
+            \begin{equation}
+                \gamma_{LS}\cdot A_2+\gamma_{SC}\cdot A_1=\gamma_{LS}2\pi r^2(1-\cos\theta)+\gamma_{SC}\pi r^2\sin^2\theta,
+            \end{equation}
+            形核前后的界面能变化为
+            \begin{equation}
+                \begin{aligned}
+                    \Delta G_s&=\gamma_{LS}\cdot A_2+\gamma_{SC}- \gamma_{LC}\cdot A_1\\
+                    &=2 \pi \cdot r^{2}(1-\cos \theta)+\pi r^{2} \sin ^{2} \theta\left(\gamma_{s c}-\gamma_{L c}\right).
+                \end{aligned}
+            \end{equation}
+            代入\autoref{晶核形核过程中的力学平衡}得到
+            \begin{equation}
+                \Delta G_{S}=\pi \cdot r^{2} \gamma_{L S}\left(2-3 \cos \theta+\cos ^{3} \theta\right).
+            \end{equation}
+            晶核形成时化学自由焓变化为
+            \begin{equation}
+                -V \cdot \Delta G_{v}=-\pi \cdot r^{3} \frac{2-3 \cos \theta+\cos ^{3} \theta}{3} \Delta G_{v},
+            \end{equation}
+            非均匀形核的自由能总改变量为上两项之和
+            \begin{equation}
+            \begin{aligned} 
+                \Delta G_{\text{非}| \mathrm{E}} &=\Delta G_{s}+\left(-V \cdot \Delta G_{v}\right) \\ 
+                &=\left(\pi \cdot r^{2} \cdot \gamma_{L S}-\frac{\pi \cdot r^{3}}{3} \cdot \Delta G_{v}\right) \cdot\left(2-3 \cos \theta+\cos ^{3} \theta\right) \\ 
+                &=\left(-\frac{4 \pi \cdot r^{3}}{3} \Delta G_{v}+4 \pi \cdot r^{2} \gamma_{L S}\right). \cdot \frac{2-3 \cos \theta+\cos ^{3} \theta}{4} 
+            \end{aligned}
+            \end{equation}
+            类似于前面求均匀形核功时的推导，平衡时有
+            \begin{equation}
+                \frac{\dif\left(\Delta G_{ \text{非}}\right)}{\dif r}=\left(-4 \pi \cdot r^{2} \cdot \Delta G_{v}+8 \pi \cdot r \cdot \gamma_{LS}\right) \cdot \frac{2-3 \cos \theta+\cos ^{3} \theta}{4}=0,
+            \end{equation}
+            此时临界半径为
+            \begin{equation}
+                r^*=\frac{2\gamma_{LS}}{\Delta G_v},
+            \end{equation}
+            对应的非均匀形核功为
+            \begin{equation}
+                \Delta G_{\text{非}}^{*}=\frac{16 \pi \gamma_{L S}^{3}}{3 \Delta G_{v}^{2}} \cdot \frac{2-3 \cos \theta+\cos ^{3} \theta}{4},
+            \end{equation}
+            对于均匀形核，形核功为
+            \begin{equation}
+                \Delta G^*_{\text{均}}\cdot\frac{2-3 \cos \theta+\cos ^{3} \theta}{4},
+            \end{equation}
+            由于
+            \begin{equation}
+                \frac{2-3 \cos \theta+\cos ^{3} \theta}{4}=\frac{(2+\cos \theta)(1-\cos \theta)^{2}}{4} \leq 1,
+            \end{equation}
+            所以，有以下结论：
+            \begin{itemize}
+                \item[1] $\theta=0$，$\cos\theta=1$，$\Delta G^*_{\text{非}}/\Delta G^*_{\text{均}}=0$，此时称为完全浸润；
+                \item[2] $\theta=\frac{\pi}{2}$，$\cos\theta=0$，$\Delta G^*_{\text{非}}/\Delta G^*_{\text{均}}=\frac{1}{2}$；
+                \item[3] $\theta=\pi$，$\cos\theta=-1$，$\Delta G^*_{\text{非}}/\Delta G^*_{\text{均}}=1$，此时称为完全不浸润；
+                \item[4] 一般情况下，非均匀形核的形核功比均匀形核小。
+            \end{itemize}
+    
+    \section{新相的长大}
+        在讨论完形核过程，接下来讨论相的长大过程。相长大有两种形式，分别为扩散型和非扩散型。
+        其中扩散性又有两种分别为短程扩散和长程扩散，两种的扩散速度不同。
         
+        \subsection{界面控制的长大过程}
+            对于没有成分变化的转变，比如多形性转变、有序-无序转变等，可以吧新相长大的过程看出纯粹是$\alpha\to\beta$相界的移动过程。
+
+            相变$\alpha\to\beta$的驱动力是自由能的变化$\Delta G_v$，阻力是克服势垒$\Delta G_m$。
+            根据统计力学，原子发生$\alpha\to\beta$转变的频率为
+            \begin{equation}
+                v_{\alpha \beta}=v \exp \left(-\frac{\Delta G_{m}}{k T}\right),
+            \end{equation}
+            式中，$v$为原子振动频率。而原子反向由$\beta\to\alpha$的频率为
+            \begin{equation}
+                v_{\beta \alpha}=v \exp \left(-\frac{\Delta G_{m}-\Delta G_{v}}{k T}\right),\Delta G_{v}<0,
+            \end{equation}
+            则原子由$\alpha\to\beta$的迁移频率$v^\prime$为：
+            \begin{equation}
+                v^{\prime}=v_{\alpha \beta}-v_{\beta \alpha}=v \exp \left(-\frac{\Delta G_{m}}{k T}\right)\left[1-\exp \left(\frac{\Delta G_{v}}{k T}\right)\right],
+            \end{equation}
+            假设迁移距离为$\lambda$，则$\beta$长大速度为
+            \begin{equation}
+                u=\lambda v^{\prime}=\lambda v \exp \left(-\frac{\Delta G_{m}}{k T}\right)\left[1-\exp \left(\frac{\Delta G_{v}}{k T}\right)\right].
+            \end{equation}
+
+            根据温度和自由能变化情况不同，可以分为以下几种情况：
+            \begin{itemize}
+                \item[1] 当$\Delta T$很小，$|\Delta G_v|$也很小，而且$|\Delta G_v|\ll kT$，则有
+                        \begin{equation}
+                            u=\lambda v\left(-\frac{\Delta G_{v}}{k T}\right) \exp \left(-\frac{\Delta G_{m}}{k T}\right);
+                        \end{equation} 
+                        跨越相界的扩散系数为$D=\lambda^2v \exp \left( -\frac{\Delta G_m}{kT} \right)$，所以有
+                        \begin{equation}
+                            u=\frac{D}{\lambda}\left(-\frac{\Delta G_{v}}{k T}\right),
+                        \end{equation}
+                        也就是当$\Delta T$很小，$u\propto|\Delta G_v|$，并且随温度下降而增加，虽然扩散系数下降，但是并不会产生较大影响；
+                \item[2] 如果$\Delta T$很大，使$|\Delta G_v|\gg kT$，则有
+                        \begin{equation}
+                            u=\lambda v \exp \left(-\frac{\Delta G_{m}}{k T}\right)=\frac{D}{\lambda},
+                        \end{equation} 
+                        长大速度$u\propto D$，并且随温度下降而减小。
+            \end{itemize}
+            在某一温度，长大速率有极大值。当形核和长大速率都大时，相变最快，因而使温度－时间－转变曲线呈字母C的形状。在恒温转变过程中，新相恒速长大，其线度$\propto$长大时间。
+        \subsection{扩散控制的长大过程}
+            对于一些有成分变化（如连续沉淀）的转变，新相的长大依靠溶质原子的长程扩散。
+
+            
     \section{过饱和固溶体的脱溶沉淀}
     \section{调幅分解}
     \section{马氏体相变}

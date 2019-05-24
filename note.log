@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7000 64-bit) (preloaded format=xelatex 2019.5.3)  24 MAY 2019 15:33
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7000 64-bit) (preloaded format=xelatex 2019.5.3)  24 MAY 2019 18:41
 entering extended mode
 **c:/Users/lenovo/Desktop/课件/材料物理/材料物理笔记/note.tex
 (c:/Users/lenovo/Desktop/课件/材料物理/材料物理笔记/note.tex
@@ -1592,31 +1592,38 @@ Package hyperref Warning: No autoref name for `subfigure' on input line 309.
 
 Package hyperref Warning: No autoref name for `subfigure' on input line 310.
 
-[49]) [50] [51
+[49] [50] [51] [52]) [53] [54
 
-] [52] (Chapters/复习题.tex
+] [55] [56] (Chapters/复习题.tex
 Chapter 8.
-[53
+[57
 
 ])
 No file note.ind.
-[54]
+[58]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
  (note.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 165.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
-Package rerunfilecheck Info: File `note.out' has not changed.
-(rerunfilecheck)             Checksum: 84EF2AF2F3A2B0E88590F2BBB3ED480D.
+
+
+Package rerunfilecheck Warning: File `note.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `note.out':
+(rerunfilecheck)             Before: DE3DAE58C650CBFC088BF7BA44FD7E57
+(rerunfilecheck)             After:  5E7A6F079C99F248645FA939B866A1C8.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
  ) 
 Here is how much of TeX's memory you used:
- 44436 strings out of 427671
- 909137 string characters out of 3149235
- 1013120 words of memory out of 3000000
- 47875 multiletter control sequences out of 15000+200000
+ 44439 strings out of 427671
+ 909163 string characters out of 3149235
+ 1012120 words of memory out of 3000000
+ 47878 multiletter control sequences out of 15000+200000
  539516 words of font info for 98 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
  62i,17n,77p,477b,878s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on note.pdf (54 pages).
+Output written on note.pdf (58 pages).
