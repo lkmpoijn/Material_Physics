@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7000 64-bit) (preloaded format=xelatex 2019.5.3)  23 MAY 2019 23:26
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7000 64-bit) (preloaded format=xelatex 2019.5.3)  24 MAY 2019 09:58
 entering extended mode
 **c:/Users/lenovo/Desktop/课件/材料物理/材料物理笔记/note.tex
 (c:/Users/lenovo/Desktop/课件/材料物理/材料物理笔记/note.tex
@@ -1486,7 +1486,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [3]
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 
-59.
+61.
  [4])
 \tf@toc=\write6
 \openout6 = `note.toc'.
@@ -1531,18 +1531,25 @@ Chapter 4.
 
 ] [26]) [27] [28] [29
 
-] [30] (Chapters/固溶体.tex) (Chapters/扩散.tex)
-(Chapters/相变.tex
+] [30] (Chapters/固溶体.tex
 Chapter 5.
+) (Chapters/扩散.tex [31
+
+] [32
+
+]
+Chapter 6.
+) (Chapters/相变.tex [33] [34
+
+]
+Chapter 7.
 File: fig/金属及合金中的一级相变.png Graphic file (type bmp)
 <fig/金属及合金中的一级相变.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31
-
-]
-[32] [33] [34]
+ [35]
+[36] [37] [38]
 
 Package hyperref Warning: No autoref name for `subfigure' on input line 139.
 
@@ -1550,14 +1557,14 @@ Package hyperref Warning: No autoref name for `subfigure' on input line 139.
 
 Package hyperref Warning: No autoref name for `subfigure' on input line 146.
 
-(fig/混合时结合能增加的自由能曲线.tex [35])
+(fig/混合时结合能增加的自由能曲线.tex [39])
 
 Package hyperref Warning: No autoref name for `subfigure' on input line 153.
 
 
 Package hyperref Warning: No autoref name for `subfigure' on input line 155.
 
-[36] [37] [38]
+[40] [41] [42]
 File: fig/均匀形核速率I与转变温度之间的关系/a.jpg Graphic file (type bmp)
 <fig/均匀形核速率I与转变温度之间的关系/a.jpg>
 File: fig/均匀形核速率I与转变温度之间的关系/b.jpg Graphic file (type bmp)
@@ -1573,22 +1580,22 @@ Package hyperref Warning: No autoref name for `subfigure' on input line 309.
 
 Package hyperref Warning: No autoref name for `subfigure' on input line 310.
 
-[39]) [40] [41
+[43]) [44] [45
 
-] [42] (Chapters/复习题.tex
-Chapter 6.
-[43
+] [46] (Chapters/复习题.tex
+Chapter 8.
+[47
 
 ])
 No file note.ind.
-[44]
+[48]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
  (note.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 165.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
 Package rerunfilecheck Info: File `note.out' has not changed.
-(rerunfilecheck)             Checksum: F80593CAE6811286B23F2769D2E813FA.
+(rerunfilecheck)             Checksum: F659EA316C7E2D2BACE7CF87352D8D65.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
  ) 
 Here is how much of TeX's memory you used:
@@ -1600,4 +1607,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  62i,17n,77p,477b,878s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on note.pdf (44 pages).
+Output written on note.pdf (48 pages).

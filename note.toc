@@ -39,22 +39,24 @@
 \contentsline {subsection}{\numberline {4.3.1}多晶体塑性变形的特点}{27}{subsection.4.3.1}% 
 \contentsline {subsection}{\numberline {4.3.2}多晶体的屈服应力}{27}{subsection.4.3.2}% 
 \contentsline {part}{III\hspace {1em}固溶体、扩散与相变}{29}{part.3}% 
-\contentsline {chapter}{\numberline {5}相变}{31}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}相变概念}{31}{section.5.1}% 
-\contentsline {subsection}{\numberline {5.1.1}动力学相变分类}{31}{subsection.5.1.1}% 
-\contentsline {subsection}{\numberline {5.1.2}热力学的相变分类}{32}{subsection.5.1.2}% 
-\contentsline {subsection}{\numberline {5.1.3}固溶体自由能的计算}{33}{subsection.5.1.3}% 
-\contentsline {subsubsection}{混合过程中熵的改变量}{33}{section*.12}% 
-\contentsline {subsubsection}{混合过程中焓的改变量}{34}{section*.13}% 
-\contentsline {subsection}{\numberline {5.1.4}混合过程的自由能改变量以及成分与自由能关系}{35}{subsection.5.1.4}% 
-\contentsline {section}{\numberline {5.2}均匀形核}{36}{section.5.2}% 
-\contentsline {section}{\numberline {5.3}形核速率及均匀形核在固态转变中的推广}{38}{section.5.3}% 
-\contentsline {subsection}{\numberline {5.3.1}形核引起的晶格畸变}{38}{subsection.5.3.1}% 
-\contentsline {subsection}{\numberline {5.3.2}相界面性质的影响}{40}{subsection.5.3.2}% 
-\contentsline {section}{\numberline {5.4}非均匀形核（界面形核）}{40}{section.5.4}% 
-\contentsline {section}{\numberline {5.5}过饱和固溶体的脱溶沉淀}{40}{section.5.5}% 
-\contentsline {section}{\numberline {5.6}调幅分解}{40}{section.5.6}% 
-\contentsline {section}{\numberline {5.7}马氏体相变}{40}{section.5.7}% 
-\contentsline {part}{IV\hspace {1em}考试内容}{41}{part.4}% 
-\contentsline {chapter}{\numberline {6}晶体缺陷}{43}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}问题}{43}{section.6.1}% 
+\contentsline {chapter}{\numberline {5}固溶体}{31}{chapter.5}% 
+\contentsline {chapter}{\numberline {6}扩散}{33}{chapter.6}% 
+\contentsline {chapter}{\numberline {7}相变}{35}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}相变概念}{35}{section.7.1}% 
+\contentsline {subsection}{\numberline {7.1.1}动力学相变分类}{35}{subsection.7.1.1}% 
+\contentsline {subsection}{\numberline {7.1.2}热力学的相变分类}{36}{subsection.7.1.2}% 
+\contentsline {subsection}{\numberline {7.1.3}固溶体自由能的计算}{37}{subsection.7.1.3}% 
+\contentsline {subsubsection}{混合过程中熵的改变量}{37}{section*.12}% 
+\contentsline {subsubsection}{混合过程中焓的改变量}{38}{section*.13}% 
+\contentsline {subsection}{\numberline {7.1.4}混合过程的自由能改变量以及成分与自由能关系}{39}{subsection.7.1.4}% 
+\contentsline {section}{\numberline {7.2}均匀形核}{40}{section.7.2}% 
+\contentsline {section}{\numberline {7.3}形核速率及均匀形核在固态转变中的推广}{42}{section.7.3}% 
+\contentsline {subsection}{\numberline {7.3.1}形核引起的晶格畸变}{42}{subsection.7.3.1}% 
+\contentsline {subsection}{\numberline {7.3.2}相界面性质的影响}{44}{subsection.7.3.2}% 
+\contentsline {section}{\numberline {7.4}非均匀形核（界面形核）}{44}{section.7.4}% 
+\contentsline {section}{\numberline {7.5}过饱和固溶体的脱溶沉淀}{44}{section.7.5}% 
+\contentsline {section}{\numberline {7.6}调幅分解}{44}{section.7.6}% 
+\contentsline {section}{\numberline {7.7}马氏体相变}{44}{section.7.7}% 
+\contentsline {part}{IV\hspace {1em}考试内容}{45}{part.4}% 
+\contentsline {chapter}{\numberline {8}晶体缺陷}{47}{chapter.8}% 
+\contentsline {section}{\numberline {8.1}问题}{47}{section.8.1}% 
