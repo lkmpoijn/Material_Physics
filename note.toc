@@ -17,51 +17,58 @@
 \contentsline {subsubsection}{Frank惯例法}{19}{section*.10}% 
 \contentsline {subsection}{\numberline {2.3.3}柏式矢量守恒定律}{20}{subsection.2.3.3}% 
 \contentsline {section}{\numberline {2.4}位错应力场}{20}{section.2.4}% 
-\contentsline {chapter}{\numberline {3}晶粒边界}{21}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}晶界结构}{21}{section.3.1}% 
-\contentsline {subsection}{\numberline {3.1.1}小角度晶界}{21}{subsection.3.1.1}% 
-\contentsline {subsubsection}{倾转晶界}{22}{section*.12}% 
-\contentsline {subsubsection}{扭转晶界}{22}{section*.13}% 
-\contentsline {subsection}{\numberline {3.1.2}大角度晶界}{22}{subsection.3.1.2}% 
-\contentsline {section}{\numberline {3.2}晶界能量}{23}{section.3.2}% 
-\contentsline {subsection}{\numberline {3.2.1}小角度晶界的能量}{23}{subsection.3.2.1}% 
-\contentsline {subsection}{\numberline {3.2.2}大角度晶界的能量}{23}{subsection.3.2.2}% 
-\contentsline {section}{\numberline {3.3}晶界的运动}{23}{section.3.3}% 
-\contentsline {subsection}{\numberline {3.3.1}小角晶界的移动}{23}{subsection.3.3.1}% 
-\contentsline {part}{II\hspace {1em}性能强化}{25}{part.2}% 
-\contentsline {chapter}{\numberline {4}晶体的范性变形}{27}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}单晶体的滑移变形}{27}{section.4.1}% 
-\contentsline {subsection}{\numberline {4.1.1}滑移晶体学特征}{27}{subsection.4.1.1}% 
-\contentsline {subsection}{\numberline {4.1.2}影响滑移系统的因素}{27}{subsection.4.1.2}% 
-\contentsline {subsection}{\numberline {4.1.3}滑移方式与滑移带}{27}{subsection.4.1.3}% 
-\contentsline {section}{\numberline {4.2}单晶体屈服与晶体的转动及碎化}{27}{section.4.2}% 
-\contentsline {subsection}{\numberline {4.2.1}临界分切应力定律}{27}{subsection.4.2.1}% 
-\contentsline {subsection}{\numberline {4.2.2}临界切应力的位错理论}{27}{subsection.4.2.2}% 
-\contentsline {subsection}{\numberline {4.2.3}拉伸过程中集体的转动和碎化}{28}{subsection.4.2.3}% 
-\contentsline {subsection}{\numberline {4.2.4}孪生}{29}{subsection.4.2.4}% 
-\contentsline {subsection}{\numberline {4.2.5}总结}{29}{subsection.4.2.5}% 
-\contentsline {section}{\numberline {4.3}多晶体范性变形的特点及晶界的作用}{29}{section.4.3}% 
-\contentsline {subsection}{\numberline {4.3.1}多晶体塑性变形的特点}{29}{subsection.4.3.1}% 
-\contentsline {subsection}{\numberline {4.3.2}多晶体的屈服应力}{29}{subsection.4.3.2}% 
-\contentsline {part}{III\hspace {1em}固溶体、扩散与相变}{31}{part.3}% 
-\contentsline {chapter}{\numberline {5}固溶体}{33}{chapter.5}% 
-\contentsline {chapter}{\numberline {6}扩散}{35}{chapter.6}% 
-\contentsline {chapter}{\numberline {7}相变}{37}{chapter.7}% 
-\contentsline {section}{\numberline {7.1}相变概念}{37}{section.7.1}% 
-\contentsline {subsection}{\numberline {7.1.1}动力学相变分类}{37}{subsection.7.1.1}% 
-\contentsline {subsection}{\numberline {7.1.2}热力学的相变分类}{38}{subsection.7.1.2}% 
-\contentsline {subsection}{\numberline {7.1.3}固溶体自由能的计算}{39}{subsection.7.1.3}% 
-\contentsline {subsubsection}{混合过程中熵的改变量}{39}{section*.15}% 
-\contentsline {subsubsection}{混合过程中焓的改变量}{40}{section*.16}% 
-\contentsline {subsection}{\numberline {7.1.4}混合过程的自由能改变量以及成分与自由能关系}{41}{subsection.7.1.4}% 
-\contentsline {section}{\numberline {7.2}均匀形核}{42}{section.7.2}% 
-\contentsline {section}{\numberline {7.3}形核速率及均匀形核在固态转变中的推广}{44}{section.7.3}% 
-\contentsline {subsection}{\numberline {7.3.1}形核引起的晶格畸变}{44}{subsection.7.3.1}% 
-\contentsline {subsection}{\numberline {7.3.2}相界面性质的影响}{46}{subsection.7.3.2}% 
-\contentsline {section}{\numberline {7.4}非均匀形核（界面形核）}{46}{section.7.4}% 
-\contentsline {section}{\numberline {7.5}过饱和固溶体的脱溶沉淀}{46}{section.7.5}% 
-\contentsline {section}{\numberline {7.6}调幅分解}{46}{section.7.6}% 
-\contentsline {section}{\numberline {7.7}马氏体相变}{46}{section.7.7}% 
-\contentsline {part}{IV\hspace {1em}考试内容}{47}{part.4}% 
-\contentsline {chapter}{\numberline {8}晶体缺陷}{49}{chapter.8}% 
-\contentsline {section}{\numberline {8.1}问题}{49}{section.8.1}% 
+\contentsline {section}{\numberline {2.5}位错的应变能}{21}{section.2.5}% 
+\contentsline {section}{\numberline {2.6}位错的线张力}{21}{section.2.6}% 
+\contentsline {section}{\numberline {2.7}位错核心}{21}{section.2.7}% 
+\contentsline {section}{\numberline {2.8}位错的受力与运动}{21}{section.2.8}% 
+\contentsline {section}{\numberline {2.9}位错与晶体缺陷间的相互作用}{21}{section.2.9}% 
+\contentsline {section}{\numberline {2.10}位错的增殖}{21}{section.2.10}% 
+\contentsline {section}{\numberline {2.11}实际晶体中的位错}{21}{section.2.11}% 
+\contentsline {chapter}{\numberline {3}晶粒边界}{23}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}晶界结构}{23}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}小角度晶界}{23}{subsection.3.1.1}% 
+\contentsline {subsubsection}{倾转晶界}{24}{section*.12}% 
+\contentsline {subsubsection}{扭转晶界}{24}{section*.13}% 
+\contentsline {subsection}{\numberline {3.1.2}大角度晶界}{24}{subsection.3.1.2}% 
+\contentsline {section}{\numberline {3.2}晶界能量}{25}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}小角度晶界的能量}{25}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}大角度晶界的能量}{25}{subsection.3.2.2}% 
+\contentsline {section}{\numberline {3.3}晶界的运动}{25}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}小角晶界的移动}{25}{subsection.3.3.1}% 
+\contentsline {part}{II\hspace {1em}性能强化}{27}{part.2}% 
+\contentsline {chapter}{\numberline {4}晶体的范性变形}{29}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}单晶体的滑移变形}{29}{section.4.1}% 
+\contentsline {subsection}{\numberline {4.1.1}滑移晶体学特征}{29}{subsection.4.1.1}% 
+\contentsline {subsection}{\numberline {4.1.2}影响滑移系统的因素}{29}{subsection.4.1.2}% 
+\contentsline {subsection}{\numberline {4.1.3}滑移方式与滑移带}{29}{subsection.4.1.3}% 
+\contentsline {section}{\numberline {4.2}单晶体屈服与晶体的转动及碎化}{29}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}临界分切应力定律}{29}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}临界切应力的位错理论}{29}{subsection.4.2.2}% 
+\contentsline {subsection}{\numberline {4.2.3}拉伸过程中集体的转动和碎化}{30}{subsection.4.2.3}% 
+\contentsline {subsection}{\numberline {4.2.4}孪生}{31}{subsection.4.2.4}% 
+\contentsline {subsection}{\numberline {4.2.5}总结}{31}{subsection.4.2.5}% 
+\contentsline {section}{\numberline {4.3}多晶体范性变形的特点及晶界的作用}{31}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}多晶体塑性变形的特点}{31}{subsection.4.3.1}% 
+\contentsline {subsection}{\numberline {4.3.2}多晶体的屈服应力}{31}{subsection.4.3.2}% 
+\contentsline {part}{III\hspace {1em}固溶体、扩散与相变}{33}{part.3}% 
+\contentsline {chapter}{\numberline {5}固溶体}{35}{chapter.5}% 
+\contentsline {chapter}{\numberline {6}扩散}{37}{chapter.6}% 
+\contentsline {chapter}{\numberline {7}相变}{39}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}相变概念}{39}{section.7.1}% 
+\contentsline {subsection}{\numberline {7.1.1}动力学相变分类}{39}{subsection.7.1.1}% 
+\contentsline {subsection}{\numberline {7.1.2}热力学的相变分类}{40}{subsection.7.1.2}% 
+\contentsline {subsection}{\numberline {7.1.3}固溶体自由能的计算}{41}{subsection.7.1.3}% 
+\contentsline {subsubsection}{混合过程中熵的改变量}{41}{section*.15}% 
+\contentsline {subsubsection}{混合过程中焓的改变量}{42}{section*.16}% 
+\contentsline {subsection}{\numberline {7.1.4}混合过程的自由能改变量以及成分与自由能关系}{43}{subsection.7.1.4}% 
+\contentsline {section}{\numberline {7.2}均匀形核}{44}{section.7.2}% 
+\contentsline {section}{\numberline {7.3}形核速率及均匀形核在固态转变中的推广}{46}{section.7.3}% 
+\contentsline {subsection}{\numberline {7.3.1}形核引起的晶格畸变}{46}{subsection.7.3.1}% 
+\contentsline {subsection}{\numberline {7.3.2}相界面性质的影响}{48}{subsection.7.3.2}% 
+\contentsline {section}{\numberline {7.4}非均匀形核（界面形核）}{48}{section.7.4}% 
+\contentsline {section}{\numberline {7.5}过饱和固溶体的脱溶沉淀}{48}{section.7.5}% 
+\contentsline {section}{\numberline {7.6}调幅分解}{48}{section.7.6}% 
+\contentsline {section}{\numberline {7.7}马氏体相变}{48}{section.7.7}% 
+\contentsline {part}{IV\hspace {1em}考试内容}{49}{part.4}% 
+\contentsline {chapter}{\numberline {8}晶体缺陷}{51}{chapter.8}% 
+\contentsline {section}{\numberline {8.1}问题}{51}{section.8.1}% 
