@@ -215,6 +215,119 @@
         \section{位错应力场}
             根据\autoref{section:位错的普遍定义与伯格斯矢量}，位错是一个线缺陷，其最大畸变分布在以位错线为轴心的管道区域内，管道的直径为2到3个原子间距。
             同时位错的畸变与距离位错线的距离成反比，距离越远的区域，畸变也越小。
+            但是由于位错造成的畸变遍布整个晶体，所以伴随这些畸变也造成了晶体各原子之间的位置发生变化，偏离了
+            原来的平衡位置，相互之间产生了内应力的作用，应力和应变的乘积即是造成系统能量上升的原因，因此需要定量地分析位错在晶体中所引起的畸变
+            和能量。
+
+            为了方便研究，一般把晶体分成两个区域
+            \begin{itemize}
+                \item[1] 位错中心，由于这个区域畸变严重，必须要考虑晶体结构和原子间相互作用，才能分析应力场和相应的能量；
+                \item[2] 远离位错中心的区域，这一部分畸变相对较小，因此可以使用线弹性理论处理。
+            \end{itemize}
+            
+            如\autoref{螺型位错的连续介质模型}所示，沿$z$方向位错线取一个圆柱体，由于中心位置畸变能过大，将其中心挖去，挖掉的区域半径为$r_0$。
+            圆柱体沿$z$方向错开一个原子间距$b$，也就是晶体中出现了一个螺位错。假设所研究的点距离中心为$r$，则在绕行一周后，弹性畸变为$b$，平均单位周长变形为
+            \begin{equation}
+                \varepsilon=\frac{b}{2\pi r}.
+            \end{equation}
+
+            \begin{figure}[ht]
+                \centering
+                \includegraphics[scale=0.5]{fig/螺型位错的连续介质模型.eps}
+                \caption{螺型位错的连续介质模型。}
+                \label{螺型位错的连续介质模型}
+            \end{figure}
+
+            在柱坐标系中，平均单位周长变形为
+            \begin{equation}
+                \gamma_{z\theta}=\frac{b}{2\pi r},
+            \end{equation}
+            由于是弹性变形，代入到胡克定律中，有
+            \begin{equation}
+                \tau_{z\theta}=\mu\gamma=\frac{\mu b}{2\pi r}, r>r_0.
+            \end{equation}
+            其中$\mu$为切变模量。
+
+            在直角坐标系中，可以得出
+            \begin{align}
+                \tau_{xz}&=-\frac{\mu b}{2\pi}\frac{y}{x^2+y^2},\\
+                \tau_{yz}&=\frac{\mu b}{2\pi}\frac{x}{x^2+y^2},
+            \end{align}
+            由此可以看出，
+            \begin{itemize}
+                \item[1] 在晶体中，只要有位错就有应力场,而不管此晶体是否有外加应力，外加应力与位错产生的应力场无关；
+                \item[2] 不同$r$都有应力场，也就是说，位错应力是一个长程应力场，遍布于整个晶体的应力场；
+                \item[3] 伴随$r$增大，$\tau$减小，因此距离位错中心越远的地方，应力也就越小；
+                \item[4] 根据公式的结果，$r$趋于0，$\tau$为无限大，因此上述公式不再适用于这种情况，这与挖掉位错核心这一方法相符。
+            \end{itemize}
+            关于位错的应力场的分布则主要是弹性力学的内容，这里不再关注。
+
+            \subsection{刃型位错的应力场}
+                假设晶体没有边界，体积无限大，刃位错的位错线沿$z$方向，符号为正，如\autoref{刃型位错的连续介质模型}所示，则
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[scale=0.5]{fig/刃型位错模型.eps}
+                    \caption{刃型位错的连续介质模型。}
+                    \label{刃型位错的连续介质模型}
+                \end{figure}
+                应力场的主应力及分量为：
+                \begin{align} 
+                    \sigma_{x x} &=-\frac{\mu b}{2 \pi(1-v)} \frac{y\left(3 x^{2}+y^{2}\right)}{\left(x^{2}+y^{2}\right)^{2}}, \\ 
+                    \sigma_{y y} &=\frac{\mu b}{2 \pi(1-v)} \frac{y\left(x^{2}+y^{2}\right)}{\left(x^{2}+y^{2}\right)^{2}}, \\
+                    \tau_{x y} &=\frac{\mu b}{2 \pi(1-v)} \frac{x\left(x^{2}-y^{2}\right)}{\left(x^{2}+y^{2}\right)^{2}}, \\
+                    \sigma_{z z} &=v\left(\sigma_{x x}+\sigma_{y y}\right), \\
+                    \tau_{x z} &=\tau_{y z}=0 .
+                \end{align}
+                其中$v$为泊松比，改用柱坐标系后上述关系变为
+                \begin{align}
+                    \sigma_{r r}&=\sigma_{\theta \theta}=-\frac{\mu b}{2 \pi(1-v)} \frac{\sin \theta}{r}, \\ 
+                    \sigma_{r \theta}&=\frac{\mu b}{2 \pi(1-v)} \frac{\cos \theta}{r}, \\ 
+                    \sigma_{z z}&=v\left(\sigma_{r r}+\sigma_{\theta \theta}\right).
+                \end{align}
+                从刃型位错应力场的表达式可以发现，刃型位错有以下特点
+                \begin{enumerate}
+                    \item[1] 应力场与$z$方向无关，是平面型的；
+                    \item[2] 正应力场关于$yoz$面和$y$轴对称，而且$|\sigma_{xx}|>|\sigma_{yy}|$,
+                    \begin{enumerate}
+                        \item[a] 当$y>0$也就是上半晶体，$\sigma_{xx}<0$，受压应力，
+                        \item[b] 当$y<0$也就是下半晶体，$\sigma_{xx}>0$，受张应力；
+                    \end{enumerate} 
+                    \item[3] 应力大小与$b$大小有关，而且当$r$增大，应力下降，这与简化分析得到的结果一致；
+                    \item[4] $y=0$时，$xoz$面也就是位错的滑移面上有
+                            \begin{align}
+                                \sigma_{xx}&=\sigma_{yy}=0,\\
+                                \tau_{xy}&=\tau_{yx}.
+                            \end{align} 
+                            也就是切应力在滑移面上有最大值。
+                \end{enumerate}
+            \subsection{螺型位错的应力场}
+                在直角坐标系下，\autoref{螺型位错的连续介质模型}的应力场表达形式为
+                \begin{align} 
+                    \tau_{x z} &=-\frac{\mu b}{2 \pi} \frac{y}{x^{2}+y^{2}}, \\
+                    \tau_{y z} &=\frac{\mu b}{2 \pi} \frac{x}{x^{2}+y^{2}}. 
+                \end{align}
+                在柱坐标系下，有
+                \begin{equation}
+                    \tau_{\theta z}=\tau_{z\theta}=\frac{\mu b}{2\pi r},
+                \end{equation}
+                而其他的应力分量均为0。而螺型位错的应力场的特点为
+                \begin{itemize}
+                    \item[1]  螺型位错的应力场只有切应力分量，没有正应力分量，所有的正应力分量均等于0。
+                    \item[2] 应力大小和$b$有关，并且随着$r$越大、应力越小；
+                    \item[3] 应力是轴对称的，与$θ$ 无关。
+                \end{itemize}
+            \subsection{混合位错的应力场}
+                混合型位错可以采用将柏氏矢量分解的办法进行求解，我们可以发现，位错线平
+                行的螺型位错由于没有正应力分量，因此其正应力分量只要采用刃型位错的正应力分
+                量即可。
+                
+                同时刃型位错的切应力分量只有$\tau_{xy}$分量，而螺型位错的切应力分量为$\tau_{xz}$和$\tau_{yz}$，
+                因此没有相互重叠的应力分量，可以进行叠加。因此可以总结为如下的特点：
+                \begin{itemize}
+                    \item[1] 螺型和刃型没有重叠分量；
+                    \item[2] 应力场互不影响；
+                    \item[3] 因此混合型可以分解为螺型与刃型分量分别计算并叠加。
+                \end{itemize}
         \section{位错的应变能}
         \section{位错的线张力}
         \section{位错核心}
