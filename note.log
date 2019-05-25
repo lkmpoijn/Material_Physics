@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7000 64-bit) (preloaded format=xelatex 2019.5.3)  24 MAY 2019 23:44
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7000 64-bit) (preloaded format=xelatex 2019.5.3)  25 MAY 2019 23:55
 entering extended mode
 **c:/Users/lenovo/Desktop/课件/材料物理/材料物理笔记/note.tex
 (c:/Users/lenovo/Desktop/课件/材料物理/材料物理笔记/note.tex
@@ -1530,27 +1530,28 @@ File: fig/刃型位错模型.eps Graphic file (type eps)
 <fig/刃型位错模型.eps>
  [22]
 Missing character: There is no θ in font cmmi12!
- [23] [24]) (Chapters/晶粒边界.tex [25] [26
+ [23] [24] [25])
+(Chapters/晶粒边界.tex [26] [27] [28
 
 ]
 Chapter 3.
-[27] [28] [29]) [30] [31
+[29] [30] [31]) [32] [33
 
-] [32] (Chapters/晶体的范性变形.tex
+] [34] (Chapters/晶体的范性变形.tex
 Chapter 4.
-[33
+[35
 
-] [34]) [35] [36] [37
+] [36]) [37] [38] [39
 
-] [38] (Chapters/固溶体.tex
+] [40] (Chapters/固溶体.tex
 Chapter 5.
-) (Chapters/扩散.tex [39
+) (Chapters/扩散.tex [41
 
-] [40
+] [42
 
 ]
 Chapter 6.
-) (Chapters/相变.tex [41] [42
+) (Chapters/相变.tex [43] [44
 
 ]
 Chapter 7.
@@ -1559,8 +1560,8 @@ File: fig/金属及合金中的一级相变.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43]
-[44] [45] [46]
+ [45]
+[46] [47] [48]
 
 Package hyperref Warning: No autoref name for `subfigure' on input line 139.
 
@@ -1568,14 +1569,14 @@ Package hyperref Warning: No autoref name for `subfigure' on input line 139.
 
 Package hyperref Warning: No autoref name for `subfigure' on input line 146.
 
-(fig/混合时结合能增加的自由能曲线.tex [47])
+(fig/混合时结合能增加的自由能曲线.tex [49])
 
 Package hyperref Warning: No autoref name for `subfigure' on input line 153.
 
 
 Package hyperref Warning: No autoref name for `subfigure' on input line 155.
 
-[48] [49] [50]
+[50] [51] [52]
 File: fig/均匀形核速率I与转变温度之间的关系/a.jpg Graphic file (type bmp)
 <fig/均匀形核速率I与转变温度之间的关系/a.jpg>
 File: fig/均匀形核速率I与转变温度之间的关系/b.jpg Graphic file (type bmp)
@@ -1591,15 +1592,15 @@ Package hyperref Warning: No autoref name for `subfigure' on input line 309.
 
 Package hyperref Warning: No autoref name for `subfigure' on input line 310.
 
-[51] [52] [53] [54]) [55] [56
+[53] [54] [55] [56]) [57] [58
 
-] [57] [58] (Chapters/复习题.tex
+] [59] [60] (Chapters/复习题.tex
 Chapter 8.
-[59
+[61
 
 ])
 No file note.ind.
-[60]
+[62]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
  (note.aux)
@@ -1610,12 +1611,12 @@ Package rerunfilecheck Info: File `note.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
  ) 
 Here is how much of TeX's memory you used:
- 44440 strings out of 427671
- 909176 string characters out of 3149235
+ 44460 strings out of 427671
+ 910370 string characters out of 3149235
  1013099 words of memory out of 3000000
- 47879 multiletter control sequences out of 15000+200000
+ 47899 multiletter control sequences out of 15000+200000
  539516 words of font info for 98 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
  62i,17n,77p,477b,878s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on note.pdf (60 pages).
+Output written on note.pdf (62 pages).
