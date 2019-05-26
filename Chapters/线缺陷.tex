@@ -387,35 +387,35 @@
                     w_{\text{螺}} =\frac{\mu b^2}{2\pi r}\left[ \ln\left( \frac{r_1}{r_0} \right)-1 \right].                    
                 \end{equation}
             \subsection{混合型位错的应变能}
-            由于混合型位错的应力场可以将混合型位错分解为螺型分量和刃型分量再求出各
-            自的应力场分量后进行叠加，从而应变能也可以先分解，再进行叠加即可。
+                由于混合型位错的应力场可以将混合型位错分解为螺型分量和刃型分量再求出各
+                自的应力场分量后进行叠加，从而应变能也可以先分解，再进行叠加即可。
 
-            假设柏式矢量$\vec{b}$与位错线夹角等于$\psi$，则刃型位错和螺型位错的分量为
-            \begin{align}
-                \text{刃型位错：}&b_\perp=\vec{b}\sin\psi,\\
-                \text{螺型位错：}&b_\parallel=\vec{b}\cos\psi.\\                
-            \end{align}
-            由于同向刃型位错与螺型位错无相互作用，两者可以叠加
-            \begin{equation}
-                w_{\text{混}}=\frac{\mu b^{2} \sin ^{2} \psi}{4 \pi(1-v)} \ln \left(\frac{r_{1}}{r_{0}}\right)+\frac{\mu b^{2} \cos ^{2} \psi}{4 \pi} \ln \left(\frac{r_{1}}{r_{0}}\right),
-            \end{equation}
-            或者写为：
-            \begin{align}
-                w_{\text{混}}=\frac{\mu b^{2}}{4 \pi K} \ln \left(\frac{r_{1}}{r_{0}}\right),\\
-                \frac{1}{K}=\cos^2\psi+\frac{\sin^2\psi}{1-v}.
-            \end{align}
-            从应变能的表达式可以看出：
-            \begin{itemize}
-                \item[1] 应变能和$b^2$成正比，刃型比螺型差一个因子，由于一般金属材料泊松比在0.3左右，也就是说，相同位错强度的刃型位错比螺型位错的应变能大50\%左右；
-                \item[2] 接近位错核心时，公式不再适用，通常情况下，位错核心能是应变能的十分之一；
-                \item[3] 对于一般金属，位错应力场范围受到亚晶界的限制，所以$r_1\simeq\SI{1e-4}{\cm}$，而$r_0\simeq\SI{1e-8}{\cm}$，因此在原理位错核心区有
+                假设柏式矢量$\vec{b}$与位错线夹角等于$\psi$，则刃型位错和螺型位错的分量为
+                \begin{align}
+                    \text{刃型位错：}&b_\perp=\vec{b}\sin\psi,\\
+                    \text{螺型位错：}&b_\parallel=\vec{b}\cos\psi.\\                
+                \end{align}
+                由于同向刃型位错与螺型位错无相互作用，两者可以叠加
                 \begin{equation}
-                    w_{\text{混}}\simeq\mu b^2=\alpha\mu b^2,
-                \end{equation} 
-                其中$\alpha$在\numrange{0.5}{1}之间，因为位错的应变能相当大，在位错的自由能的表达式
-                中，应变能是主要的项，所以位错不是热平衡自由能最低的产物，这一点和空位不
-                同。
-            \end{itemize}
+                    w_{\text{混}}=\frac{\mu b^{2} \sin ^{2} \psi}{4 \pi(1-v)} \ln \left(\frac{r_{1}}{r_{0}}\right)+\frac{\mu b^{2} \cos ^{2} \psi}{4 \pi} \ln \left(\frac{r_{1}}{r_{0}}\right),
+                \end{equation}
+                或者写为：
+                \begin{align}
+                    w_{\text{混}}=\frac{\mu b^{2}}{4 \pi K} \ln \left(\frac{r_{1}}{r_{0}}\right),\\
+                    \frac{1}{K}=\cos^2\psi+\frac{\sin^2\psi}{1-v}.
+                \end{align}
+                从应变能的表达式可以看出：
+                \begin{itemize}
+                    \item[1] 应变能和$b^2$成正比，刃型比螺型差一个因子，由于一般金属材料泊松比在0.3左右，也就是说，相同位错强度的刃型位错比螺型位错的应变能大50\%左右；
+                    \item[2] 接近位错核心时，公式不再适用，通常情况下，位错核心能是应变能的十分之一；
+                    \item[3] 对于一般金属，位错应力场范围受到亚晶界的限制，所以$r_1\simeq\SI{1e-4}{\cm}$，而$r_0\simeq\SI{1e-8}{\cm}$，因此在原理位错核心区有
+                    \begin{equation}
+                        w_{\text{混}}\simeq\mu b^2=\alpha\mu b^2,
+                    \end{equation} 
+                    其中$\alpha$在\numrange{0.5}{1}之间，因为位错的应变能相当大，在位错的自由能的表达式
+                    中，应变能是主要的项，所以位错不是热平衡自由能最低的产物，这一点和空位不
+                    同。
+                \end{itemize}
         \section{位错的线张力}
             已知位错的能量与它的长度成正比，若要增加位错的长度，必须做功，因此，围殴错总是有收缩其长度的趋势，
             这表明在能量的意义上将，位错线表现有线张力。可以定义位错线张力等于位错线伸长一个单位长度所做的功，
@@ -431,7 +431,13 @@
             浪形的位错，其张力基本上也可以用式，证明从略。故在以后的应用中均用此公式表
             示位错的线张力。
         \section{位错核心}
-            
+            在讨论应力场和应变能的时候，都提到由于位错核心\index{位错核心}区域的畸变太大，不能用线弹性理论来求解，必须引入点阵的周期性，并结合连续
+            介质的结果处理一系列问题：位错核中心的宽度，位错在点阵中运动的阻力和位错中心能量的问题。
+
+            但是点阵模型不是彻底的，仍然要采纳某些观点和结果，所以只使用一个半点阵模型。
+
+            这一节的点阵模型最早由Peiels提出，后来Nabarro对这一模型进行了修正，因此称为
+            Peiels-Nabarro模型，简称派-纳模型\index{位错核心!派-纳模型}。
         \section{位错的受力与运动}
         \section{位错与晶体缺陷间的相互作用}
         \section{位错的增殖}
