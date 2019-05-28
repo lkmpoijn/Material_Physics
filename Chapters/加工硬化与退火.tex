@@ -1,0 +1,113 @@
+\chapter{加工硬化与退火}
+    根据霍尔佩奇公式可知，对于多晶材料，当晶粒极端细化时，屈服强度会达到无限大，然而这是不可能的。
+    后来根据一些经验，人们认为该公式中应当分段。
+
+    从拉伸曲线上看，当应力大于屈服应力时，应变增加，应力也会增加，这一现象称为加工硬化\index{加工硬化}。
+    加工硬化是结构材料的必备性质，使材料的强度得到提高，其益处在于：
+    \begin{itemize}
+        \item[1] 防止材料被进一步破坏；
+        \item[2] 同时保证了材料的均匀变形能力。
+    \end{itemize}
+    同样也有着一定的坏处
+    \begin{itemize}
+        \item[1] 加工过程需要退火，变形逐渐困难；
+        \item[2] 加工硬化后，材料的韧性降低；
+        \item[3] 由于加工硬化能力不足，材料可能会出现缩颈；
+    \end{itemize}
+    在描述这一性质时有一些参数需要先介绍：
+    \begin{itemize}
+        \item[1] $n$：加工硬化指数，其数值与最大力对应的型变量相等；
+        \item[2] $r$：方形材料的横向变形与纵向变形之比，与内部的织构有关，即滑移面与板面的平行关系；
+        \item[3] $\frac{\dif \sigma}{\dif \varepsilon}$：加工硬化率，其与应力应变曲线的交点即为颈缩开始点。
+    \end{itemize}
+    \section{单晶体加工硬化特征}
+        \subsection{面心立方应力应变曲线}
+            面心立方晶体的形变效果较好，因此方便研究，也就是不选择体心立方和密排六方的原因。
+            实验采用\textbf{单晶面心立方晶体}的加工硬化曲线可以分为三个阶段
+            \begin{itemize}
+                \item[1] I区：$\dif\tau/\dif\varepsilon$加工硬化率较小，容易滑移，数值大约为$2\time10^{-4}\mu$；
+                \item[2] II区：$\dif\tau/\dif\varepsilon$数值基本为常数，大小为$3\times10^{-2}\mu$，称为线性硬化区；
+                \item[3] III区：$\dif\tau/\dif\varepsilon$逐渐变小趋于0，称为抛物线硬化区。
+            \end{itemize}
+            在多晶中难以观察到第一阶段。
+
+            研究发现，有以下因素
+            \begin{itemize}
+                \item 温度上升使临界分切应力$\tau_c$下降，第一阶段和第二阶段分界点以及第二第三阶段分界点$\gamma_2$和$\gamma_3$显著下降，从而第二第三阶段的切应力都会显著下降；
+                \item 层错的影响：拓展位错的宽$d$\footnote{拓展位错宽度增加，层错能下降，交滑移难度增加。}与拓展位错的交滑移，层错能下降，第2第3阶段影响大；
+                \item 取向对影响第二阶段分界点和第一部分的斜率；
+                \item 合金元素可能是第一阶段增长。
+            \end{itemize}
+
+            从滑移线分析，
+            \begin{itemize}
+                \item [1]第一阶段滑移线较细，在光学显微镜一般观察不到，而且都是相同的指数；
+                \item [2]第二阶段的滑移线有交叉，开始双滑移，线长度随型变量的增加而逐步变短；
+                \item [3] 第三阶段的滑移带不再连续，位错呈现胞状结构\footnote{与回复阶段有关}。
+            \end{itemize}
+        \subsection{体心和六方应力应变曲线}
+            高纯度的体心立方和六方晶体也是三个阶段，第三阶段与拓展位错交滑移有关，由于体心立方的层错能大，
+            因此不容易观察到第三阶段。而观察六方的三阶段更是要求取向合适，因而观察困难。
+    \section{加工硬化的位错理论}
+        加工硬化的理论主要有两种类型：
+        \begin{itemize}
+            \item[1] 平行位错硬化理论：与临界分切应力位错理论相似，认为主滑移线的平行位错阻力的长程应力增加；
+            \item[2] 交截位错硬化理论：认为林位错对主滑移系产生阻碍，是短程的硬化理论；
+        \end{itemize}
+        \subsection{第一阶段的位错理论}
+        第一阶段位错沿滑移面运动，基本不与其他位错发生交互作用。这一阶段主要是
+        位错发生单滑移，
+        \begin{equation}
+            \tau=\alpha\mu b\rho^{-\frac{1}{2}},
+        \end{equation}
+        位错源开动，在L-C位错锁\index{L-C位错锁}\footnote{L-C位错锁与双滑移有关，第一阶段为单滑移，L-C位错锁数量不会增加。}附近发生塞积，位错的密度有少量增加，切应力增加。
+        假设不动位错的数量为$N''$，单位面积不动位错前塞积的位错数目是有上限的，用$n$表示
+        塞积的总位错数为$N''*n$，所以切应力为
+        \begin{equation}
+            \tau=\alpha\mu nb\sqrt{N''},
+        \end{equation}
+        此时的变形为
+        \begin{equation}
+            \gamma=\rho Sb=N''L(nb),
+        \end{equation}
+        其中$L$为位错长度。
+        
+        此时的加工硬化率为
+        \begin{equation}
+            \theta=\frac{\dif\sigma}{\dif \varepsilon}=\alpha\mu\frac{1}{L}\cdot N''
+        \end{equation}
+
+    \subsection{加工硬化的第二阶段的理论}
+        位错开始发生双滑移和多滑移，位错塞积在L-C位错锁前形成新的位错环。由于仍然是塞积在位错锁，
+        所以塞积的上限一定$n$不变，而位错锁前形成新的位错锁，所以$N$增加，也可以说是被激活。
+        此时产生的形变的增加为
+        \begin{equation}
+            \dif \gamma=L(nb)\dif N,
+        \end{equation}
+        位错的长度为
+        \begin{equation}
+            L=\frac{\Lambda}{\gamma-\gamma_2},
+        \end{equation}
+        $\gamma_2$为第二阶段切应变分界点，将$L$带回后积分
+        \begin{equation}
+            \int(\gamma-\gamma_2)\dif\gamma=\int\Lambda(nb)\dif N,
+        \end{equation}
+        所以形变变化量为
+        \begin{equation}
+            \gamma-\gamma_2=\sqrt{2knb\Lambda N},
+        \end{equation}
+        此时的切应力为
+        \begin{equation}
+            \tau=\alpha\mu(nb)\sqrt{N},
+        \end{equation}
+        此时的加工硬化率为：
+        \begin{equation}
+            \theta_2=\frac{\tau}{\gamma-\gamma_2}=\alpha\mu\sqrt{\frac{nb}{2\Lambda}},
+        \end{equation}
+    \subsection{第三阶段的位错理论}
+        螺位错的交滑移，正号和负号的位错相互抵消，使得加工硬化减弱。
+    \subsection{包辛格效应}
+        金属在正向加载后然后反向加载，会导致屈服应力降低，在单晶体中不容易观察到，由于这一现象与
+        晶界的位错塞积和残余应力有关，因此在多晶体中较为明显。
+
+        比如金属处在高周疲劳情况，屈服应力会不断降低，最后断裂。
