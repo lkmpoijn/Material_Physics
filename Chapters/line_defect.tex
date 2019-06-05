@@ -439,10 +439,191 @@
             这一节的点阵模型最早由Peiels提出，后来Nabarro对这一模型进行了修正，因此称为
             Peiels-Nabarro模型，简称派-纳模型\index{位错核心!派-纳模型}。
             \subsection{点阵模型}
-                
-            \subsection{位错引起的晶体错排能}
-            \subsection{点阵阻力}
+                以简单立方晶体的刃型位错为例，位错可以视为由两个完成的半晶体拼接而成。
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.5\textwidth]{fig/coordinate_in_edge_dislocation.eps}
+                    \caption{刃型位错模型。}
+                    \label{刃型位错模型}
+                \end{figure}
 
+                设原子间距为$\Phi$，在拼合之前，横轴方向的原子间距为
+                \begin{equation}
+                    \begin{aligned}
+                        \Phi&=\frac{1}{2}b,x>0,\\
+                        \Phi&=-\frac{1}{2}b,x<0.
+                    \end{aligned}
+                \end{equation}
+                在拼合后，上下两层分别受到压力和张力，使得原子尽量对齐，在这一过程中，假设上半晶体中位错核心层的
+                原子发生了位移$u(x)$，则有
+                \begin{equation}
+                    \begin{aligned}
+                        x>0,u(x)<0,\\
+                        x>0,u(x)>0.
+                    \end{aligned}
+                \end{equation}
+                而原子间距则变为
+                \begin{align}
+                    \Phi(x)=2u(x)+\frac{b}{2},x>0\label{位错正向的原子的位移},\\
+                    \Phi(x)=2u(x)-\frac{b}{2},x<0.
+                \end{align}
+                距离位错核心无穷远时，位错的影响忽略不计，也就是$\Phi(\pm\infty)=0$，所以有
+                \begin{equation}
+                    u(\infty)=-u(-\infty)=-\frac{b}{4}.
+                \end{equation}
+                \input{fig/distance_from_blance_point_away_from_dislocation_core.tex}
+
+                为求出相应的位移，以及各个原子之间的畸变，Peierls假定上下两层之间的作用力为周期性，
+                位错管道外为连续介质，这样，两层原子之间的吸引产生了切应力$\sigma_{yx}$，
+                \begin{equation}
+                    \sigma_{yx}=\frac{\mu}{2\pi}\left( \frac{b}{a} \right)\sin\left( \frac{2\pi\Phi}{b} \right),x>0,
+                \end{equation}
+                代入\autoref{位错正向的原子的位移}，可得
+                \begin{equation}
+                    \sigma_{yx}=-\frac{\mu}{2\pi}\left( \frac{b}{a} \right)\sin\left( \frac{4\pi u(x)}{b} \right),x>0,                    
+                \end{equation}
+                当$\Phi$很小时，没有发生塑性形变，因此可以使用虎克定律
+                \begin{equation}
+                    \sigma_{yx}=\frac{\mu}{2\pi}\left( \frac{b}{a} \right)\sin\left( \frac{2\pi\Phi}{b} \right)=\mu\left( \frac{\Phi}{a} \right)\label{刃位错核心引起的切应力公式1}.
+                \end{equation}
+
+                同时为了求出上半部材料的切应力，EShelby提出柏式矢量为$\vec{b}$的位错可以
+                看作是无穷小位错分布在滑移面上，柏式矢量之和等于$\vec{b}$，且分布不均匀。
+                设分布在$x^{\prime}\to x^{\prime}+\dif x^{\prime}$之间的柏式矢量为$f(x^{\prime})$
+                因此总的柏式矢量为
+                \begin{equation}
+                    \int_{-\infty}^{^\infty}f(x^{\prime})\dif x^{\prime}=\vec{b},
+                \end{equation}
+                分布在$x^{\prime}\to x^{\prime}+\dif x^{\prime}$之间的切应力为$\frac{\mu f(x^\prime)}{2\pi(1-v)}\cdot\frac{(x-x^{\prime})^3}{(x-x^\prime)^4}\dif x^{\prime}=\frac{\mu f(x^\prime)}{2\pi(1-v)}\frac{\dif x^{\prime}}{x-x^{\prime}}$
+                在两层原子之间的切应力为
+                \begin{equation}
+                    \sigma_{y x}=\frac{\mu}{2 \pi(1-v)} \int_{-\infty}^{\infty} \frac{f\left(x^{\prime}\right) d x^{\prime}}{x-x^{\prime}}, x^{\prime}>0\label{利用不均匀位错导出的核心切应力1},
+                \end{equation}
+                当$x=x^\prime$时，有
+                \begin{equation}
+                    \dif u(x^\prime)=f(x^\prime)\dif x^\prime,
+                \end{equation}
+                \autoref{利用不均匀位错导出的核心切应力1}可以写作
+                \begin{equation}
+                    \sigma_{y x}=-\frac{\mu}{\pi(1-v)} \int_{-\infty}^{\infty} \frac{\frac{d u\left(x^{\prime}\right)}{d x^{\prime}} d x^{\prime}}{x-x^{\prime}}, x>0\label{刃位错核心引起的切应力公式2},
+                \end{equation}
+                
+                联立\autoref{刃位错核心引起的切应力公式1}和\autoref{刃位错核心引起的切应力公式2}，解得
+                \begin{equation}
+                    u(x)=-\frac{b}{2\pi}\arctan\left( \frac{x}{\xi} \right),\xi=\frac{a}{2(1-v)},
+                \end{equation}
+                当$x=0$，$u(x)=0$，而$\Phi=\frac{b}{2}$，在无穷远处，$u(x)=\frac{b}{4}$，此时$\Phi=0$，
+                这与之前的结果一致。位错管道附近的错排值分布如\autoref{错排值沿滑移面的分布}所示。
+
+                \input{fig/disturbtion_of_atom_away_from_dislocation_core.tex}
+                
+                从图中把畸变的半高宽定义为位错的宽度，因此位错的宽度为
+                \begin{equation}
+                    \omega=2\xi=\frac{a}{1-v},
+                \end{equation}
+                对于泊松比为0.3的材料，位错的宽度约为$1.5a$。
+            \subsection{位错引起的晶体错排能}
+                前面已经提到，用连续介质中位错的模型可以求出弹性畸变区的能量，但不能求
+                出位错中心的能量。现在我们可以根据上述点阵模型对这部分能量做一个估计。位错
+                总的应变能包括两部分，即$\omega_0$就是以前求过的弹性区的能量，$\omega_{AB}$
+                是由于位错中心附近滑移面上下两层原子没能对齐的能量——错排能。
+
+                由于错排实际只在位错附近，所以这部分能量属于位错中心区的能量。
+                先求解弹性区的应变能$W_0$，根据点阵模型得到的应力表达式，代入后可以求得
+                \begin{equation}
+                    \begin{aligned}
+                        W_{0}&=\frac{1}{2} \int_{\xi}^{r_{1}} \sigma_{y_{x}} b \dif x\\
+                        &=-\frac{\mu b^{2}}{4 \pi a} \int_{\xi}^{r_{1}} \sin \frac{4 \pi u(x)}{b} \dif x\\
+                        &=\frac{\mu b^{2}}{4 \pi a} \int_{\xi}^{r_{1}} \sin \left[2 \arctan\left(\frac{x}{\xi}\right)\right] \dif x
+                    \end{aligned}
+                \end{equation}
+                由于位错是长程应力场，$r_1\gg\xi$，因此有
+                \begin{equation}
+                    W_0\simeq\frac{\mu b^2}{4\pi(1-v)}\ln\frac{r_1}{\xi}.
+                \end{equation}
+                然后求解错排能，在计算应变能时，假定位错宽度以外滑移面两侧的晶体发生
+                刚性滑移，然而这在位错核心区不再适用，在上节计算错排能的时候，为了强调点阵模型．所以用代数的加
+                法，这是为了要显示出位错偏离出对称位置以后能量的变化。做为近似，假如如不需
+                要求点阵阻力，我们仍然可用积分代替相加两层的对应原子的错排能已知等于
+                \begin{equation}
+                    \frac{\mu b^{3}}{4 \pi^{2} a}\left(1+\cos \frac{4 \pi u(x)}{b}\right)=\frac{\mu b^{3}}{2 \pi^{2} a} \cos ^{2}\left(\frac{2 \pi u(x)}{b}\right)=\frac{\mu b^{3}}{2 \pi^{2} a} \cos ^{2}\left(\arctan \frac{x}{\xi}\right),
+                \end{equation}
+                错排能的表达式为
+                \begin{equation}
+                    W_{AB}\simeq\frac{\mu b^2}{2\pi(1-v)},
+                \end{equation}
+                这一数值与应变能相比，差了一个系数$\ln\left( \frac{r}{\xi} \right)$，如果$r=\SI{1e-4}{\cm}$，
+                $\xi$为\SI{1e-8}{\cm}，则可以计算处错排能大约为应变能的0.1。
+            \subsection{点阵阻力}
+                平衡的条件下，位错处于平衡位置，如果位错中心发生了$\alpha b$的滑移，系统的能量也会发生变化，
+                这一变化的梯度造就了位错移动的阻力。这样，计算的关键在于求出位于位错偏离出对称位置时，由于滑
+                移面上下两层原子没有对齐而引起的能量。假设\autoref{刃型位错模型}中AB两层原子对齐时作用能为零。
+                考虑A层任意一行与纸面垂直的原子，这一行原子与位错平行，并且为单位长度，它所受的力$F$若按照
+                连续介质的观点是分布在面积$b$上面的，
+                这一行原子所受的力为
+                \begin{equation}
+                    F=\sigma_{xy}b\label{位错核心受到的力与柏式矢量关系},
+                \end{equation}
+                因此可以说这一行原子和B层对应原子因为没有对齐而具有能量，也就是错排能，其等于
+                \begin{equation}
+                    \frac{1}{2}\int_{0}^{\Phi}\sigma_{yx}b\dif \Phi,
+                \end{equation}
+                其中的系数$1/2$是因为原子之间的势能分配在A 和B 两部分的值将取自\footnote{这里有缺漏，希望有人补完。}
+                。因此在A层与$z$轴平行的单位长度的一行原子具有的错排能为
+                \begin{equation}
+                    \begin{aligned}
+                        V_{u(x)}&=-\frac{1}{2}\left(\frac{\mu b^{2}}{2 \pi a}\right) \int \sin \frac{4 \pi u(x)}{b} d(2 u) \\ 
+                            &=-\frac{\mu b^{3}}{8 \pi^{2} a} \int \sin \frac{4 \pi u}{b} d\left(\frac{4 \pi u}{b}\right) \\ 
+                            &=\frac{\mu b^{3}}{8 \pi^{2} a}\left(\cos \frac{4 \pi u}{b}\right)+C.
+                    \end{aligned}
+                \end{equation}
+                $C$为积分常数，已知当$u=\pm\frac{b}{4}$时，错排能为零，可以求出$C$：
+                \begin{equation}
+                    C=-\frac{\mu b^{3}}{8 \pi^{2} a} \cos \left(\frac{4 \pi}{b} \cdot \frac{b}{4}\right)=\frac{\mu b^{3}}{8 \pi^{2} a},
+                \end{equation}
+                回代得到
+                \begin{equation}
+                    V_{u(x)}=\frac{\mu b^{3}}{8 \pi^{2} a}\left[1+\cos \frac{4 \pi u(x)}{b}\right].
+                \end{equation}
+                若位错正好位于对称位置，则A和B两层全部原则为位置可以写作
+                \begin{equation}
+                    x=\frac{1}{2}nb,n=0,\pm1,\pm2\cdots
+                \end{equation}
+                当位错中心发生$\alpha b$的位移后，原子位置近似可以表示为
+                \begin{equation}
+                    x=\left( \alpha+\frac{1}{2}n \right)b,
+                \end{equation}
+                这样错排能变为
+                \begin{equation}
+                    \begin{aligned}
+                        V&=\frac{\mu b^{3}}{8 \pi^{2} a} \sum_{-\infty}^{+\infty}\left[1+\cos \frac{4 \pi}{b}\left\{-\frac{b}{2 \pi} \arctan \frac{\left(a+\frac{1}{2} n\right)}{\xi} b\right\}\right] \\
+                        &=\frac{\mu b^{3}}{8 \pi^{2} a} \sum_{-\infty}^{+\infty}\left[1+\cos 2\left\{\arctan \frac{\left(a+\frac{1}{2} n\right)}{\zeta} b\right\}\right].
+                    \end{aligned}
+                \end{equation}
+                单个原子的势能可以写作
+                \begin{equation}
+                    V_{\alpha}=\frac{\mu b^{2} \xi}{\pi a} \sum_{s=1}^{\infty} e^{-4 x \xi_{s} / b} \cos 4 \pi a s,
+                \end{equation}
+                将$\xi=\frac{a}{2(1-v)}$代入得到
+                \begin{equation}
+                    V_{a}=\frac{\mu b^{2}}{2 \pi(1-v)} e^{-4 \pi \xi / b} \cos 4 \pi \alpha,
+                \end{equation}
+                位错运动受到的力为
+                \begin{equation}
+                    F=\frac{-\partial V_\alpha}{\partial(\alpha b)}=\frac{-1}{b}\frac{\partial V_a}{\partial\alpha}=\frac{2\mu b}{1-v}e^{-\frac{4\pi\xi}{b}}\sin{4\pi\alpha},
+                \end{equation}
+                其最大值为$F_{\mathrm{max}}=\frac{2 \mu b}{1-\nu} e^{-4 \pi \xi / b}$。
+                根据\autoref{位错核心受到的力与柏式矢量关系}，刃位错运动受到的切应力为
+                \begin{equation}
+                    \sigma_{e}=\frac{2 \mu}{1-v} e^{-i \pi \xi / b}=\frac{2 \mu}{1-v} \exp \left[-\frac{2 \pi a}{b(1-v)}\right],
+                \end{equation}
+                称为点阵阻力\index{电阵阻力}，也称作派-纳力。
+            \subsection{小结}
+            \begin{itemize}
+                \item 位错的核心能约为$\frac{1}{10}\mu b^2$，也就是应变能的$1/10$；
+                \item 位错的宽度认为是$\omega=1.5a$，$a$为晶格常数；
+                \item 点阵阻力$\tau$取决于点阵阻力$a$和柏式矢量$b$，当点阵常数增大时，阻力减小。
+            \end{itemize}
         \section{位错的受力与运动}
             \subsection{位错的运动方式}
             \subsection{位错运动与晶体变形}

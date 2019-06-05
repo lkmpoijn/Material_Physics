@@ -1,0 +1,22 @@
+\begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            xlabel={$x$},
+            ylabel={$\left\vert\Phi\right\vert$},
+            xtick=\empty,
+            ytick=\empty,
+            axis y line =center,
+            axis x line =bottom,
+            ymax=1.5,
+        ]
+            \addplot[blue,thin,domain=0:5,samples=100] {1-2*rad(atan(1.4*x))/3.1415}
+                node[pos=0,black,anchor=east] {$\frac{b}{2}$};
+            \addplot[blue,thin,domain=-5:0,samples=100] {1-2*rad(atan(-1.4*x))/3.1415};
+            \addplot[dashed,black,domain=-0.75:0.75] {0.5}
+                node[pos=0.35, anchor=north] {$\omega$};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{错排值沿滑移面的分布。}
+    \label{错排值沿滑移面的分布}
+\end{figure}

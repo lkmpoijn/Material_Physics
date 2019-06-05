@@ -1,0 +1,22 @@
+\begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            xlabel={$x$},
+            ylabel={$u(x)$},
+            xtick=\empty,
+            ytick=\empty,
+            axis y line =center,
+            axis x line =center,
+        ]
+            \addplot[blue,thin,domain=0:5,samples=100] {exp(-x)-1};
+            \addplot[blue,thin,domain=-5:0,samples=100] {-exp(x)+1};
+            \addplot [black,thin,dashed,domain=-5:5] {1.08}
+                node [pos=0.75,anchor=north] {$\frac{b}{4}$};
+            \addplot [black,thin,dashed,domain=-5:5] {-1.08}
+                node [pos=0.25,anchor=south] {$-\frac{b}{4}$};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{原子平衡位置的偏离与位错核心距离的关系。}
+    \label{原子平衡位置的偏离与位错核心距离的关系}
+\end{figure}
