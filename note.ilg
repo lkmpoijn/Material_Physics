@@ -1,6 +1,6 @@
-This is makeindex, version 2.15 [MiKTeX 2.9.7000 64-bit] (kpathsea + Thai support).
-Scanning input file note.idx....done (29 entries accepted, 0 rejected).
-Sorting entries....done (139 comparisons).
-Generating output file note.ind....done (49 lines written, 0 warnings).
+This is makeindex, version 2.15 [TeX Live 2018/W32TeX] (kpathsea + Thai support).
+Scanning input file note.idx....done (73 entries accepted, 0 rejected).
+Sorting entries....done (512 comparisons).
+Generating output file note.ind....done (97 lines written, 0 warnings).
 Output written in note.ind.
 Transcript written in note.ilg.

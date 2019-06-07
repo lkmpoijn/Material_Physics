@@ -1,4 +1,3 @@
-% !TEX program = xelatex
 \documentclass[12pt]{book}
 \usepackage{ctex}
 \usepackage{import}
@@ -167,4 +166,8 @@ spanning style={very thick,decoration=penciline,decorate}]%
 \part{考试内容}
 	\input{Chapters/problem.tex}
 \printindex
+\addcontentsline{toc}{chapter}{索引}
+\bibliographystyle{unsrt}
+\bibliography{reference.bib}
+\addcontentsline{toc}{chapter}{参考文献}
 \end{document}

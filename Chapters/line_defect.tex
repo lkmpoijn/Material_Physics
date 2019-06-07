@@ -272,10 +272,10 @@
                 \end{figure}
                 应力场的主应力及分量为：
                 \begin{align} 
-                    \sigma_{x x} &=-\frac{\mu b}{2 \pi(1-v)} \frac{y\left(3 x^{2}+y^{2}\right)}{\left(x^{2}+y^{2}\right)^{2}}, \\ 
-                    \sigma_{y y} &=\frac{\mu b}{2 \pi(1-v)} \frac{y\left(x^{2}+y^{2}\right)}{\left(x^{2}+y^{2}\right)^{2}}, \\
-                    \tau_{x y} &=\frac{\mu b}{2 \pi(1-v)} \frac{x\left(x^{2}-y^{2}\right)}{\left(x^{2}+y^{2}\right)^{2}}, \\
-                    \sigma_{z z} &=v\left(\sigma_{x x}+\sigma_{y y}\right), \\
+                    \sigma_{x x} &=-\frac{\mu b}{2 \pi(1-v)} \frac{y\left(3 x^{2}+y^{2}\right)}{\left(x^{2}+y^{2}\right)^{2}}\label{刃位错的x主应力}, \\ 
+                    \sigma_{y y} &=\frac{\mu b}{2 \pi(1-v)} \frac{y\left(x^{2}+y^{2}\right)}{\left(x^{2}+y^{2}\right)^{2}}\label{刃位错的y主应力}, \\
+                    \tau_{x y} &=\frac{\mu b}{2 \pi(1-v)} \frac{x\left(x^{2}-y^{2}\right)}{\left(x^{2}+y^{2}\right)^{2}}\label{刃位错的切应力}, \\
+                    \sigma_{z z} &=v\left(\sigma_{x x}+\sigma_{y y}\right)\label{刃位错的z主应力}, \\
                     \tau_{x z} &=\tau_{y z}=0 .
                 \end{align}
                 其中$v$为泊松比，改用柱坐标系后上述关系变为
@@ -554,7 +554,7 @@
                 \end{equation}
                 这一数值与应变能相比，差了一个系数$\ln\left( \frac{r}{\xi} \right)$，如果$r=\SI{1e-4}{\cm}$，
                 $\xi$为\SI{1e-8}{\cm}，则可以计算处错排能大约为应变能的0.1。
-            \subsection{点阵阻力}
+            \subsection{点阵阻力}\label{subsection:点阵阻力}
                 平衡的条件下，位错处于平衡位置，如果位错中心发生了$\alpha b$的滑移，系统的能量也会发生变化，
                 这一变化的梯度造就了位错移动的阻力。这样，计算的关键在于求出位于位错偏离出对称位置时，由于滑
                 移面上下两层原子没有对齐而引起的能量。假设\autoref{刃型位错模型}中AB两层原子对齐时作用能为零。
@@ -615,21 +615,475 @@
                 其最大值为$F_{\mathrm{max}}=\frac{2 \mu b}{1-\nu} e^{-4 \pi \xi / b}$。
                 根据\autoref{位错核心受到的力与柏式矢量关系}，刃位错运动受到的切应力为
                 \begin{equation}
-                    \sigma_{e}=\frac{2 \mu}{1-v} e^{-i \pi \xi / b}=\frac{2 \mu}{1-v} \exp \left[-\frac{2 \pi a}{b(1-v)}\right],
+                    \sigma_{e}=\frac{2 \mu}{1-v} e^{\frac{-i \pi \xi} { b}}=\frac{2 \mu}{1-v} e^{ -\frac{2 \pi a}{b(1-v)}},
                 \end{equation}
-                称为点阵阻力\index{电阵阻力}，也称作派-纳力。
+                称为点阵阻力\index{点阵阻力}，也称作派-纳力。
             \subsection{小结}
-            \begin{itemize}
-                \item 位错的核心能约为$\frac{1}{10}\mu b^2$，也就是应变能的$1/10$；
-                \item 位错的宽度认为是$\omega=1.5a$，$a$为晶格常数；
-                \item 点阵阻力$\tau$取决于点阵阻力$a$和柏式矢量$b$，当点阵常数增大时，阻力减小。
-            \end{itemize}
+                \begin{itemize}
+                    \item 位错的核心能约为$\frac{1}{10}\mu b^2$，也就是应变能的$1/10$；
+                    \item 位错的宽度认为是$\omega=1.5a$，$a$为晶格常数；
+                    \item 点阵阻力$\tau$取决于点阵阻力$a$和柏式矢量$b$，当点阵常数增大时，阻力减小。
+                \end{itemize}
         \section{位错的受力与运动}
             \subsection{位错的运动方式}
-            \subsection{位错运动与晶体变形}
-            \subsection{作用在位错上的力}
+                晶体在受到适当的应力时，位错可以发生运动，其实在构造位错的示意中就可以
+                发现，如果应力继续施加，实际产生的效果就是位错的滑移。位错的运动方式分为
+                滑移和攀移。
 
+                滑移指位错滑移在滑移面上的运动，滑移面是位错线和柏式矢量确定的平面，法线方向为$\vec{l}\times \vec{b}$。
+                而攀移是指位错垂直于滑移面上的运动。对于这两种运动，下面将分为刃型位错和螺型位错讨论。
+
+                对于刃型位错，滑移过程如\autoref{刃型位错滑移时周围原子的动作}所示，设晶体中已有一个刃型位错，在外加
+                切应力作用下，这个位错发生运动，可使晶体上下发生相对移动的区域逐渐扩大。当位错移出晶体的时候就是获赠个晶体
+                上下两部分已经完成了相对移动一个原子间距。表示随着刃型位错在晶体中扫过的各个阶段所造成的变形。是位错在晶体
+                尚未移出晶外，位错扫过整个滑移面时，就会造成永久切变。
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.7\textwidth]{fig/movement_of_edge_dislocation.jpg}
+                    \caption{刃型位错滑移时周围原子的动作。}
+                    \label{刃型位错滑移时周围原子的动作}
+                \end{figure}
+                
+                从\autoref{刃型位错滑移时周围原子的动作}中可以看出，位错周围的原子只要发生微小的位移就可以造成
+                位错的滑移，且位错的滑移不需要物质的长程迁移，所以位错运动传递的是一个组态，也就是原子错排的组态，
+                而且滑移过程中位错的运动方向与位错线方向垂直，与位错的正负号无关，刃型位错在切应力方向运动，晶体
+                上出现的台阶与位错线是平行的。
+
+                研究发现，晶体中密排面上的位错易于滑动，这与密排面的晶面间距大，点阵阻力小有关。对于螺型位错，其
+                滑移过程如\autoref{螺型位错滑移示意图}所示。螺位错周围的原子如\autoref{螺位错滑移时位错周围原子的动作}
+                所示，同样只要位错周围的原子发生微调，位错就会发生滑移，而且位错的运动方向与位错线垂直，但是位错
+                线移动方向与切应力垂直，这一点与刃位错不同。晶体上出现的台阶与位错线是垂直的。
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.5\textwidth]{fig/movement_of_screw_dislocation.jpg}
+                    \caption{螺型位错从$AA'$运动到$BB'$示意图。}
+                    \label{螺型位错滑移示意图}
+                \end{figure}
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.5\textwidth]{fig/Arrangement_of_atoms_of_slip_of_screw_dislocation.jpg}
+                    \caption{螺位错滑移时位错周围原子的动作。}
+                    \label{螺位错滑移时位错周围原子的动作}
+                \end{figure}
+
+                对于混合位错，可以分解为螺位错和刃位错，因此运动方向也是两者的矢量合成方向。
+
+                总而言之，位错的滑移过程是一个组态的传递，实际晶体中的位错滑出晶体后会在晶体表面造成台阶。
+                对于位错的滑移可以得出以下结论：
+                \begin{itemize}
+                    \item 原子的迁移很小、所需要的力也很小，逐步推移、力在柏式矢量方向上要有分量；
+                    \item 晶体错动$\vec{b}$后晶体内不存在畸变，与位错线的形状无关；
+                    \item 移动方向不是由柏式矢量方向确定，而是永远与位错线垂直的方向，对于弯曲的位错线则沿其对应点的法线方向；
+                    \item 刃型位错与螺型位错的滑移面、滑移方向、和台阶方向如\autoref{位错的滑移过程总结}所示。
+                \end{itemize}
+
+                \begin{table}[ht]
+                    \centering
+                    \caption{位错的滑移过程总结。}
+                    \label{位错的滑移过程总结}
+                    \begin{tabular}{@{}cccc@{}}
+                        \toprule
+                        位错类型 & 滑移面法线方向                & 滑移方向     & 台阶方向     \\ \midrule
+                        刃位错  & $\vec{b}\times\vec{l}$ & 平行于切应力方向 & 平行位错线方向  \\
+                        螺位错  & 密排面法线方向                & 垂直于切应力方向 & 垂直位错线方向 \\ \bottomrule
+                    \end{tabular}
+                \end{table}
+
+                另外，刃型位错还存在一种特有的运动方式，也就是攀移。刃型位错本身如果垂直于它的滑移面运动，
+                刃型位错的半薄片材料不是增长就是缩短，要实现这种运动，就需要原子的迁移来扩散质量。
+                例如空位不断扩散到刃型位错，它的半薄片材料上的原子跳入空位，是的半薄片材料本身减缩，结果使
+                刃型位错向上攀移一个原子间距。
+
+                攀移的机制虽然也可以通过间隙原子的扩散，但是空位机制更为可能。攀移过程有原子的减少和增加，这
+                与扩散有直接的关系，同时也与温度有关系，因为这是一个热激活过程，且其中存在体积变化，如果位错
+                线不是整体攀移，还会造成割阶，如\autoref{刃型位错上的割阶}所示。
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.5\textwidth]{fig/A_pair_of_jogs_on_an_edge.jpg}
+                    \caption{刃型位错上的割阶。}
+                    \label{刃型位错上的割阶}
+                \end{figure}
+
+            \subsection{位错运动与晶体变形}
+            当位错滑出晶体后，会在晶体表面造成台阶，如果若干个位错滑出晶体，将会引
+            起晶体的宏观变形，下面来分析一下晶体的宏观变形与位错滑移之间的关系。首先看
+            一下单个位错的情况。如\autoref{刃型位错滑移造成的范型变形}所示，多个位错可以先
+            叠加为一个位错$\vec{D}$。假设位错划过整个晶体扫过的面积为
+            \begin{equation}
+                A=l\cdot d,
+            \end{equation}
+            引起的变形为：
+            \begin{equation}
+                \gamma=\frac{D}{h}.
+            \end{equation}
+            如果位错只滑动了$\alpha d$，$0<\alpha<1$，位错扫过的面积为
+            \begin{equation}
+                A^\prime=\alpha l_2l_3,
+            \end{equation}
+            引起的变形为：
+            \begin{equation}
+                \gamma^\prime=\frac{\alpha D}{h}=\alpha\gamma.                
+            \end{equation}
+            \begin{figure}[ht]
+                \centering
+                \includegraphics[width=0.7\textwidth]{fig/deformation_by_edge_dislocation.jpg}
+                \caption{刃型位错滑移造成的范型变形。}
+                \label{刃型位错滑移造成的范型变形}
+            \end{figure}
+
+            对于多个位错，采用面密度\index{位错!面密度}和体密度\index{位错!体密度}的方法来分析。面密度定义为
+            单位面积上位错的露头数，而体密度定义为单位体积内位错的长度。因此如果若干个位错总长度为$L=\sum l_i$，
+            平均移动距离为$S$，则扫过的总面积为$\sum l_i S=L\cdot S$，每根位错的平均滑移量为$\frac{L\cdot S}{A}\cdot D$，
+            引起的总应变为
+            \begin{equation}
+                \gamma=\frac{LSD}{Ah}=\frac{LSD}{V}=\rho_v SD\label{刃型位错变形与体密度关系},
+            \end{equation}
+            其中$\rho_v$为位错的体密度，$V$为晶体体积，对于长方体的晶体可以也可有以下写法：
+            \begin{equation}
+                V=h(\cdot l\cdot d)=l\cdot(h\cdot d),
+            \end{equation}
+            代入\autoref{刃型位错变形与体密度关系}，可得
+            \begin{equation}
+                \gamma=\frac{LSD}{V}=\frac{nl SD}{V}=\rho_s SD,
+            \end{equation}
+            其中$\rho_s$为位错的面密度。
+
+            由于实际中位错的柏式矢量一般用$\vec{b}$表示，这里为了不产生冲突，才使用了$\vec{D}$，
+            在之后的内容中，这一公式都会写作
+            \begin{equation}
+                \gamma=\rho Sb.
+            \end{equation}
+
+            由于刃位错在厚度方向分布不均匀，晶体会发生弯曲，如\autoref{晶体的范性弯曲}所示，上下两端弧的
+            长度差为
+            \begin{equation}
+                \mathrm{AB}-\mathrm{CD}=(r+d)\theta-r\theta=\theta d,
+            \end{equation}
+            则晶体中的上半原子面数也就是位错数为
+            \begin{equation}
+                n=\frac{\theta d}{b},
+            \end{equation}
+            当晶体的厚度为$l_3$时，位错的体密度和面密度为
+            \begin{align}
+                \rho_v=\frac{\theta dl_3}{bV}=\frac{\theta dl_3}{b\theta rdl}=\frac{1}{br},\\
+                \rho_s=\frac{\theta d}{b\theta rd}=\frac{1}{br}=\rho_v.
+            \end{align}
+            \begin{figure}[ht]
+                \centering
+                \includegraphics[width=0.5\textwidth]{fig/bending_of_crystal_for_dislocation.eps}
+                \caption{晶体的范性弯曲。}
+                \label{晶体的范性弯曲}
+            \end{figure}
+
+            \subsection{作用在位错上的力}
+                在\autoref{subsection:点阵阻力}中，将点阵阻力定义为原子势的梯度，在这一节中，
+                仍然使用这个定义，
+                \begin{equation}
+                    F=-\nabla U\label{位错力的定义},
+                \end{equation}
+                并用其分析位错运动中受到的滑移力、攀移力等。
+                
+                \subsubsection{滑移力}
+                    假设位错的滑移面面积为$S$，位错线长度为$\xi$，滑动了$\dif l$，
+                    位错的柏式矢量为$\vec{b}$，扫过的面积为$\xi\cdot\dif l$，产生的平均滑移量为
+                    \begin{equation}
+                        A=\frac{\xi\dif l}{S}\cdot b=\alpha b,
+                    \end{equation}
+                    滑移面受到的外力为
+                    \begin{equation}
+                        F=S\cdot\tau,
+                    \end{equation}
+                    外力所做的功为
+                    \begin{equation}
+                        \dif W=F\cdot A=\frac{S\tau b\xi\dif l}{S}=\tau bd\xi\dif l=\dif U,
+                    \end{equation}
+                    根据定义\autoref{位错力的定义}可得
+                    \begin{equation}
+                        F^{\prime}=\frac{\dif U}{\dif l}=\tau b\xi,
+                    \end{equation}
+                    令$\xi=1$，则有
+                    \begin{equation}
+                        F^{\prime}=\tau b.
+                    \end{equation}
+
+                    位错受到的滑移力有以下特点
+                    \begin{itemize}
+                        \item 力的方向垂直于位错线；
+                        \item $\tau$必须在柏式矢量方向上有分量；
+                        \item 滑移力为组态力，并不是位错附近原子实际受到的力。
+                    \end{itemize}
+                \subsubsection{攀移力}
+                    假设一小部分的位错线$l$沿半原子面方向发生位移$s$，此时发生的体积变化为
+                    \begin{equation}
+                        \dif V=b\cdot l\times s,
+                    \end{equation}
+                    假设一个原子所占的体积为$\Omega$，则填补$\dif V$的空隙需要$\dif V/\Omega$个
+                    点缺陷，假设$\Omega=b^3$，所以原子数为
+                    \begin{equation}
+                        \dif n=\frac{ls}{b^2}.
+                    \end{equation}
+                    这一过程需要扩散，因此也需要热激活，因此攀移一般发生在较高的温度下。
+                \subsection{位错攀移阻力和化学力}
+                    假设攀移阻力为$F_z$，则攀移形成体积$\dif V$所需的功为
+                    \begin{equation}
+                        W=F_z\cdot\dif V,
+                    \end{equation}
+                    需要的原子数为$\dif n=\dif V/\dif \Omega$。
+
+                    假设点缺陷形成能为$E_f$，则填补$\dif V$的形成能为
+                    \begin{equation}
+                        \dif n\cdot E_F=\frac{E_f ls}{b^2}=
+                    \end{equation}
         \section{位错与晶体缺陷间的相互作用}
+            由于晶体中的位错具有长程应力场，当晶体中同时存在有其他晶体缺陷时，同样
+            地这些缺陷改变了原子的规则排列，从而在晶体中引入了畸变，它们之间就会发生相
+            互作用。本节主要讨论位错与其它位错以及点缺陷之间的相互作用。
+            
+            晶体之间存在大量的位错，因此，各个位错之间会由于应力场的作用产生相互长程应力
+            作用，当两个位错相遇时，两者之间还会产生短程的相互作用。首先来分析长程应力场
+            之间的相互作用。
+            \subsection{弹性应力场之间的相互作用}
+                    晶体中常常包含有很多位错，它们的弹性应力场之间发生干涉和相互作用，
+                    并且将影响到位错的分布和运动。直接处理任意分布大量位错之间的相互作用是
+                    非常困难的，有效的方法是从最简单、最基本的情况入手。
+
+                    首先讨论一堆螺位错之间的相互作用，在坐标原点和$(r,\theta)$处有一对平行于
+                    $z$轴的同号螺型位错，柏式矢量分别为$\vec{b}_1$和$\vec{b}_2$。位错$\vec{b}_1$
+                    在$(r,\theta)$处的应力场为
+                    \begin{equation}
+                        \sigma_{\theta,z}=\frac{\mu b_1}{2\pi r},
+                    \end{equation}
+                    对于位错$\vec{b}_2$来说，此应力分量作用在它的滑移面上且平行于它的柏式矢量，即
+                    ，满足滑移的条件，按照滑移力的计算，位错$\vec{b}_2$受到的力为
+                    \begin{equation}
+                        F=\frac{\mu b_1 b_2}{2\pi r},    
+                    \end{equation}
+                    这个力要求它沿两位错连线方向向往外运动，里的大小随两位错间距的增加而降低。
+                    同理，$\vec{b}_1$也受到$\vec{b}_2$大小相等方向相反的力。如果俩个螺位错的符号相反，
+                    则就会变为吸引力，这与两条通电导线的作用相似。
+                    
+                    对于平行滑移面两个刃型位错，两者的位错线与$z$轴平行，柏式矢量分别为$\vec{b}_1$和$\vec{b}_2$。
+                    根据\autoref{刃位错的x主应力}和\autoref{刃位错的切应力}，$\vec{b}_2$所在处$\sigma_{xx}$使
+                    其受到攀移力，$\tau_{yx}$使位错$\vec{b}_2$受到滑移力，分别为
+                    \begin{align}
+                        F_x&=\sigma_{yx}b_2=\frac{\mu b_1b_2}{2\pi(1-v)}=\frac{z(x^2-y^2)}{(x^2+y^2)^2},\\
+                        F_y&=-\sigma_{xx}b_2=\frac{\mu b_1b_2}{2\pi(1-v)}=\frac{y(3x^2+y^2)}{(x^2+y^2)^2}.
+                    \end{align}
+
+                    对得到的结果分析可知，$F_y$与$y$同号，也就是当位错$\vec{b}_2$在位错$\vec{b}_1$滑移面
+                    上边时，受到的攀移力$F_y$指向上，在滑移面下边时，受到的攀移力指向下，所以沿$y$轴方向两
+                    位错是互相排斥的。然而当$x^2<y^2$时$F_x$指向外，所以两位错沿$x$方向相互排斥，当$x^2<y^2$
+                    时，$F_x$指向内，所以两位错沿$x$轴方向互相吸引，如\autoref{两刃型位错在x轴方向上的相互作用}
+                    所示。在$x=0$以及$x=\pm y$的位置，$F_x$虽然等于零，但是这两种位置不同。$x=0$为稳定平衡位置，
+                    \begin{figure}[ht]
+                        \centering
+                        \includegraphics[width=0.5\textwidth]{fig/force_of_edge_dislocations_along_x_axis.eps}
+                        \caption{两同号刃型位错在$x$轴方向上的相互作用。}
+                        \label{两刃型位错在x轴方向上的相互作用}
+                    \end{figure}
+                    因为当位错$\vec{b}_2$稍微偏离这个位置时，会受到回复的力，而$x=\pm y$是不平衡位置，
+                    $\vec{b}_2$发生偏离时，受到的力使其偏离的更远。所以相同符号的刃型位错沿着
+                    与它们柏式矢量相垂直的方向排列起来是稳定的\footnote{这样的位错排列会形成一种晶粒边界。}。
+                    加入两个位错的符号相反，它们之间的作用力的方向也要改变，而$x=0$变为不稳定的平衡位置，
+                    $x=\pm y$变为稳定的平衡位置。符号相反的两个位错依靠弹性相互作用在\ang{45}方向上彼此
+                    束缚在一起，构成通常所围的位错偶极子。
+
+                    当两个位错相互平行，分别为纯螺型和纯刃型，由于螺位错的应力场没有使刃位错受力的应力分量，
+                    刃位错的应力场也没有使螺位错受力的应力分量，所以两个位错没有相互作用。
+
+                    对于具有任意柏式矢量的两个平行的直线位错，可以把每个位错都分解为刃型分量和螺型分量，
+                    然后依次计算两个螺型分量和两个刃型分量之间的相互作用，并且叠加起来，就得到了任意两个
+                    位错之间的相互作用，对所得记过可以近似地归纳为：若柏式矢量夹角小于$\frac{\pi}{2}$，
+                    则两个位错互相排斥，若柏式矢量夹角大于$\frac{\pi}{2}$，则两个位错互相吸引。
+            \subsection{位错塞积}
+                现在我们开始研究位错集群在外加应力、障碍以及集群内部的相互作用力下的平衡问题。晶体材料中通常有许多位错，
+                在外加应力作用下在滑移面上滑动。假如滑移面上遇到强的障碍物，
+                领先的位错不能越过障碍，这样就会形成由许多位错组成的塞积群。
+                实际材料中的晶界或第二相硬颗粒都是可以产生位错塞积群的障碍物。
+
+                在分切应力作用下，由同一位错源放出的位错在障碍前受到阻碍，这些位错就在障碍前排列起来，
+                这种位错组态称为塞积群，如\autoref{实际晶体中的塞积群}所示。
+
+                位错塞积群在受力上可以分为三类：
+                \begin{itemize}
+                    \item[1] 领先位错受到的障碍物的作用；
+                    \item[2] 各个位错之间的相互作用；
+                    \item[3] 外加应力作用。
+                \end{itemize}
+
+                对于外力具体的求解过程比较复杂，这里只给出主要结果。领先位错前的切应力
+                为
+                \begin{equation}
+                    \tau^{\prime}=n\tau,
+                \end{equation}
+                此式表明，当有$n$个位错被外加切应力$\tau$推向障碍物时，位错塞积群的前端将
+                产生$n$倍与外力的应力集中。
+
+                塞积群的长度为
+                \begin{equation}
+                    L=xn=\frac{\vert A\vert \pi^2}{8n\tau}(n-1)^2,
+                \end{equation}
+                与切应力$\tau$成反比。
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.7\textwidth]{fig/pile_up_groups_&_slip_transmit_twin_boundary.jpg}
+                    \caption{层错能较低的材料的孪晶界的TEM原位照片\cite{SANGID2011283}，(a)为滑移被孪晶界阻碍，形成位错塞积群，(b)为加载力过大时，滑移进入孪晶界。}
+                    \label{实际晶体中的塞积群}
+                \end{figure}
+            
+            \subsection{位错交割}
+                在晶体的范性形变过程中会产生不同滑移面上位错相交截的现象．这里牵涉到位
+                错间的弹性相互作用以及近程相互作用。下面分别考虑这两种相互作用：
+                \begin{itemize}
+                    \item[1] 弹性相互作用：设不同滑移面上的位错线相交，且夹角大于$\frac{\pi}{2}$，由于弹性相互作用，两个位错可以合成新的位错线段，以降低弹性能；
+                    \item[2] 位错的中心区可能产生近程的相互作用。
+                \end{itemize}
+
+                对于在滑移面上运动的位错来说，穿过此滑移面的其它位错称为林位错\index{林位错}。
+                林位错会阻碍位错的运动，但是若应力足够大，滑动的位错将切过林位错继续前进。位错相互切割的过程称为位错交割\index{位错交割}。
+
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.7\textwidth]{fig/Intersection_of_edge_dislocations_with_Burgers_vectors_at_right_angles_to_each_other.jpg}
+                    \caption{两个柏式矢量垂直的刃位错的相互作用\cite{HULL2011137}，(a)位错xy沿滑移面$P_{\mathrm{xy}}$移动，并切过$P_{\mathrm{AB}}$面的AB位错，(b)为
+                        xy已经切过AB，并且产生了$\mathrm{PP}^{\prime}$割阶。}
+                    \label{两个垂直的刃位错的相互作用}
+                \end{figure}
+                
+                \autoref{两个垂直的刃位错的相互作用}表示两个刃位错的相互交割，$\mathrm{P}_{\mathrm{AB}}$面
+                的位错保持不动，而$\mathrm{P}_{\mathrm{xy}}$面的位错向下移动，柏式矢量为$\vec{b}_1$，当$\vec{b}_1$
+                扫过时$\mathrm{P}_{\mathrm{AB}}$面两侧发生了相对位移$\mathrm{PP}^{\prime}$，方向和大小与
+                取决于$\vec{b}_1$。由于位错的连续性，即位错不能在晶体内部中断，$\mathrm{PP}^{\prime}$必然是
+                一小段位错，又由于柏式矢量的守恒性，它的柏式矢量也必然是$\vec{b}_2$。这一小段位错$\mathrm{PP}^{\prime}$
+                称为位错割阶。产生割阶需要能量供给，所以交割过程对位错运动是一种阻碍。粗略估计，
+                割阶能量的数量级为$\frac{\mu b^3}{10}$，对于一般金属约等于十分之几个电子伏特。
+
+                其次考虑一个刃型位错与一个螺型为位错的交割，如\autoref{刃型位错与螺型位错交割}所示，图中螺型位错的柏式矢量为
+                $\vec{b}_2$，按照螺型位错的特点，被它贯穿的一组晶面组成一个螺旋面。另一个位错的柏式矢量为$\vec{b}_1$，
+                是一个刃型位错，其滑移面恰好是螺型位错$\vec{b}_2$的螺旋面。当位错$\vec{b}_1$切过螺型位错后，
+                变成了分别位于两层晶面上的两段位错，两者的连线$\mathrm{PP}^{\prime}$也是一个位错割阶，大小
+                个方向等于螺型位错的柏式矢量$\vec{b}_2$，而其自身的柏式矢量与刃型位错相同，仍然是一段刃型位错，
+                割阶随位错$\vec{b}_1$一同向前的运动也是滑移。
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.7\textwidth]{fig/Intersection_of_an_edge_dislocation_with_a_right-handed_screw_dislocation.jpg}
+                    \caption{刃型位错$\mathrm{AB}$与垂直的右螺型位错$\mathrm{XY}$的相互作用，(a)$\mathrm{AB}$在滑移面移动切割$\mathrm{XY}$，
+                        由于螺位错使晶体螺旋上升一层，因此当切过螺位错，到达$\mathrm{A}^{\prime}\mathrm{B}^{\prime}$时，$\mathrm{AB}$不再处于
+                        同一个平面，也就是在(b)中的割阶$\mathrm{PP}^{\prime}$。}
+                    \label{刃型位错与螺型位错交割}
+                \end{figure}
+
+                一般情况下，两个位错交割时，每个位错上都要产生一小段位错，它们的柏式矢量与其本身相同，但是
+                大小和方向取决于另一位错的柏式矢量。当交割产生的小段位错不在所属的位错的滑移面时，则称为位错割阶，且所有的割阶都是刃型位错，
+                如果小段位错位于所属位错的滑移面上，则相当于位错扭折\index{位错扭折}。
+
+            \subsection{位错与溶质原子之间的相互作用}
+                \subsubsection{弹性交互作用}
+                    由于位错具有长程应力场，因此可以与溶质原子产生的畸变发生相互作用，这种作用称为弹性交互作用。
+
+                    对于刃型位错来说，假设以位错核心为原点建立极坐标系，假设晶体中的一个基体原子的半径为$r_0$，
+                    在$(r,\theta)$存在一个半径为$r_0(1+\varepsilon)$的小球，相当于将一个体积与基体原子不同的
+                    溶质原子放入晶体的空位，其中$\varepsilon$称为错配度，表示溶质原子与基本原子的差别的大小。
+                    在此过程中，外力反馈位错应力场所作的共就是位错与溶质原子的交互作用能。由于小球在周围介质中
+                    引起的位移垂直于球面，位错的应力场中只有正应力分量$\sigma_{xx}$，$\sigma_{yy}$和$\sigma_{zz}$
+                    做功，平均值为
+                    \begin{equation}
+                        \sigma=\frac{1}{2}\left( \sigma_{xx}+\sigma_{yy}+\sigma_{zz} \right),
+                    \end{equation}
+                    在位移$\varepsilon a$的过程中，位错应力场所做的功为$4\pi\sigma\varepsilon r_0^3=\sigma\Delta V$，
+                    $\Delta V=4\pi\varepsilon r_0^3$为溶质原子与基体原子的体积差。从而位错与溶质原子的相互作用能为
+                    \begin{equation}
+                        U=-\frac{1}{2}\left( \sigma_{xx}+\sigma_{yy}+\sigma_{zz} \right)\Delta V,
+                    \end{equation}
+                    把刃型位错应力场\autoref{刃位错的x主应力}、\autoref{刃位错的y主应力}和\autoref{刃位错的z主应力}代入上式，得到
+                    \begin{equation}
+                        U=A\cdot\frac{\sin\theta}{r},A=\frac{\mu b}{3\pi}\frac{1+v}{1-v}\Delta V,
+                    \end{equation}
+                    其中$r$和$\theta$带哦表溶质原子的坐标位置。
+
+                    上式表明，当$\Delta V>0$，在$0<\theta<\pi$处，$U$为正，在$\pi<\theta<2\pi$处，$U$
+                    为负。当$\Delta V<0$时则相反。平衡状态要求相互作用能最小，所以，比集体原子大的置换式溶质
+                    原子和间隙原子将被位错的压缩区排斥，被位错的膨胀区吸引，而比基体原子小的置换式溶质原子和
+                    空位的移动趋势恰好相反。
+
+                    由于溶质原子与位错有相互作用，若时间和温度允许，它们将向位错附近聚集，形成科垂耳气团\index{科垂耳气团},
+                    使位错的运动受到限制。因为在这种情况下，推动位错运动，或者首先挣脱气团的束缚，或者拖着气团一起前行，
+                    无论如何都要做更多的功，这对应着拉伸曲线中的上屈服点。
+
+                    对于螺位错来说，则没有弹性相互作用，这是因为螺位错的应力场只有切应力分量，二溶质原子产生的畸变又被
+                    假定为球形对称，但是一旦畸变不再是球形，螺位错也会与溶质原子发生相互作用\footnote{比如体心立方铁晶格中的碳原子或氮原子。}。
+                    这种相互作用有时称为史诺克气团\index{史诺克气团}。
+
+                \subsubsection{模量相互作用}
+                    设溶质原于大小和基体原于基本一样，但它的弹性不同，由此而产生的交互作用就是模量交互作用。
+                    我们在这里仅做定性的分析。首先假定溶质原子比基体硬一些，即切变模量大一些。当一个螺型位错移近这个“硬点”的时候，
+                    通过它的切应力对这个硬点施以变形的功不同于没有这个硬点而为基体时的变形功。
+                    这个功的差额就是模量交互作用能的量度。在极端情况下，设溶质原子很硬，很难变形，
+                    这种原子将抗拒螺型位错向它移近；若溶质原子比基体软一些，情况相反，
+                    原子倾向于靠近位错，位错由这个软点拉出去，需要额外的功。刃型位错和螺形位错不同，
+                    前者除了它的切应力对溶质原子施加切变以外，还可以通过它的正应力对溶质原子施加正向的变形。
+                    刃型位错和溶质原子之闻也有模量交互作用。
+                \subsubsection{化学相互作用}
+                    以上讨论的都是全位错和溶质原子通过位错的应力场和溶质原子产生的体膨胀或畸变发生作用。现在阐述另一种不同的作用，全位错分解为不全位错，
+                    ，其间有层错，在层错区溶质原子的浓度（平衡时）应该不同于基体中的溶质浓度。
+                    这种作用首先被suzuki所认识，称为化学作用。
+                    当位错运动时，这种不均匀分布的溶质原子也将随位错移动，因此这种组态通常称为suzuki气团（铃木气团）\index{铃木气团}。
+
         \section{位错的增殖}
+            \subsection{位错起源}
+                根据理论计算，位错的能量很大，除非晶体受到的应力基金理论切变强度，说明位错不是靠热激活
+                能产生的，因此位错不会在晶体中均匀形核。位错出现的位置基本有以下几种：
+                \begin{itemize}
+                    \item 应力集中的位置可能形成位错；
+                    \item 在不均匀变形中可能产生位错；
+                    \item 过饱和的空位凝胶成空位片，空位片的坍塌导致位错环形成；
+                    \item 杂质分凝、偏析，凝固后晶体成分与凝固之前不同，造成点阵常数不同，累计结果形成位错；
+                    \item 晶体中沉淀无或夹杂无在周围基体中产生较大应力，导致位错产生；
+                    \item 结晶过程中正在生长的两部分晶体相遇，如果两者的位相有轻微差别，在结合的位置就会形成位错。
+                \end{itemize}
+            \subsection{位错增殖}
+                研究发现，退火金属的位错密度在$\SI{1e6}{\cm^{-2}}$左右，而冷变形金属的位错密度会急剧增加到
+                \SI{1e12}{\cm^{-2}}左右，这说明在变形过程中存在位错密度的增殖过程，对于这一过程的解释，
+                以Frank-Read 源\index{Frank-Read源}理论最为简洁。
+
+                设想晶体中有一段位错线两端被钉住，在应力作用下，位错线由于滑移而弯曲，二位错所受
+                作用力恒与位错相垂直，则位错的发展情况如\autoref{Frank-Read源}所示。
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.8\textwidth]{fig/Frank_read_sources.jpg}
+                    \caption{Frank-Read位错源图示。}
+                    \label{Frank-Read源}
+                \end{figure}
+                当弯曲的线段相互靠近时。可以相互抵销，形成一闭合的位错圈和一段短线．这样的过程可以反复进行下去，
+                源源不断地产生新的位错圈．当位错圈和晶体表面相截，就形成了台阶，这就是显微镜中所观察到的滑移线．
+                当更多的位错圈和表面相交，中央部分的台阶逐渐变高，并向两侧伸展。
+
+                下面记忆不讨论为了卡东位错源需要多大的应力，为此首先考虑一段弧形位错在滑移力和线张力的
+                共同作用下的平衡。设想滑移面上的一端微元位错线$ab$在滑移力$F_\tau$和线张力的共同作用下到达
+                平衡。平衡时，位错线$ab$的张角为$\delta\theta$，曲率半径为$R$，如\autoref{一段弧型位错的平衡}
+                所示。根据静力学
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[scale=1]{fig/balance_of_FR_source.eps}
+                    \caption{一段弧形位错的平衡。}
+                    \label{一段弧型位错的平衡}
+                \end{figure}
+                \begin{equation}
+                    2T\sin\frac{\delta\theta}{2}=F_\tau R\delta\theta,
+                \end{equation}
+                考虑到$\delta\theta$为无穷小，可以简化为
+                \begin{equation}
+                    2T\frac{\delta\theta}{2}=F_\tau R\delta\theta,
+                \end{equation}
+                或
+                \begin{equation}
+                    F_\tau=\frac{T}{R},
+                \end{equation}
+                将$F_\tau=\tau b$和$T=\frac{1}{2}\mu b^2$代入上式，得到
+                \begin{equation}
+                    \tau=\frac{\mu b}{2R},
+                \end{equation}
+                此式表面，当位错弧线达到平衡时，外加应力与弧线的曲率半径成反比，即位错曲率半径越小，
+                要求与之相平衡的力越大。
         \section{实际晶体中的位错}
         
