@@ -1,0 +1,6 @@
+@book{ngan2007physical,
+  title={Physical Metallurgy and Advanced Materials},
+  author={Ngan, AHW},
+  year={2007},
+  publisher={Elsevier Science \& Technology}
+}

@@ -131,7 +131,7 @@ spanning style={very thick,decoration=penciline,decorate}]%
 	citecolor=black,
 	filecolor=black,
 	linkcolor=black,
-	urlcolor=black
+	urlcolor=red
 }
 %\renewcommand\subfigureautorefname{图}
 \renewcommand\figureautorefname{图}
@@ -149,9 +149,19 @@ spanning style={very thick,decoration=penciline,decorate}]%
 
 \clearpage
 \chapter*{前言}
-	本笔记内容来自材料物理课程材料整理。
+	本笔记内容来自材料物理课程材料，以及余宗森先生的《金属物理》\cite{余宗森1982高等学校教学用书}，Hull的《位错导论》\cite{HULL201143}和R.E. Smallman等人
+	的《物理冶金学》\cite{ngan2007physical}。
 
+	这个项目的最初的目的其实仅仅是整理笔记，后来发现一些讲义上不太清晰的内容，又结合其它的资料，然后才形成这个笔记。为了方便他人阅读，
+	于是使用\LaTeX 来完成这个这个项目。由于参考了一些没有找到来源的资料，没有在最后的参考文献标出，因此，如果有侵权问题，
+	请及时通知本人。
 
+	文章的图片大部分修改自Hull的《位错导论》\cite{HULL2011137}，除非完全不改动，之后就不再用参考文献标出。
+
+	目前，笔记内容已经上传到\href{https://github.com/lkmpoijn/Material_Physics}{\emph{Github}}，欢迎各位同学提出Star和Fork，
+	关于\emph{Github}和\LaTeX 的使用方法，请自行在网络上搜索，特别提醒，不要使用百度。
+
+	在本学期后，不会再更新这个项目，除非是重大情况，如果有同学相要继续完成这个项目，可以联系提出issue来催我转移项目。
 \part{晶体缺陷}
 	\input{Chapters/point_defect.tex}
 	\input{Chapters/line_defect.tex}

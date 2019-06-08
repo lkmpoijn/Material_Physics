@@ -1,0 +1,6 @@
+@article{余宗森1982高等学校教学用书,
+  title={高等学校教学用书 金属物理},
+  author={余宗森 and 田中卓 and others},
+  year={1982},
+  publisher={冶金工业出版社}
+}

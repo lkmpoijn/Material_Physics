@@ -54,4 +54,11 @@ abstract = "Grain boundaries (GBs) provide a strengthening mechanism in engineer
   pages     = {57-68},
 }
 
+@Book{ngan2007physical,
+  title     = {Physical Metallurgy and Advanced Materials},
+  publisher = {Elsevier Science \& Technology},
+  year      = {2007},
+  author    = {Ngan, AHW},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
