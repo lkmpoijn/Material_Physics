@@ -44,4 +44,14 @@ abstract = "Grain boundaries (GBs) provide a strengthening mechanism in engineer
   url       = {http://www.sciencedirect.com/science/article/pii/B9780080966724000037},
 }
 
+@InCollection{Dash1958,
+  author    = {Dash W.C.},
+  title     = {The observation of dislocations in silicon},
+  booktitle = {Dislocations and Mechanical Properties of Crystals},
+  publisher = {Wiley},
+  year      = {1958},
+  editor    = {Fisher J.C. and Johnston W.G.},
+  pages     = {57-68},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

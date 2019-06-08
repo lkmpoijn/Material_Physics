@@ -856,7 +856,7 @@
                     对于位错$\vec{b}_2$来说，此应力分量作用在它的滑移面上且平行于它的柏式矢量，即
                     ，满足滑移的条件，按照滑移力的计算，位错$\vec{b}_2$受到的力为
                     \begin{equation}
-                        F=\frac{\mu b_1 b_2}{2\pi r},    
+                        F=\frac{\mu b_1 b_2}{2\pi r}\label{两个螺型位错之间的作用力},    
                     \end{equation}
                     这个力要求它沿两位错连线方向向往外运动，里的大小随两位错间距的增加而降低。
                     同理，$\vec{b}_1$也受到$\vec{b}_2$大小相等方向相反的力。如果俩个螺位错的符号相反，
@@ -866,7 +866,7 @@
                     根据\autoref{刃位错的x主应力}和\autoref{刃位错的切应力}，$\vec{b}_2$所在处$\sigma_{xx}$使
                     其受到攀移力，$\tau_{yx}$使位错$\vec{b}_2$受到滑移力，分别为
                     \begin{align}
-                        F_x&=\sigma_{yx}b_2=\frac{\mu b_1b_2}{2\pi(1-v)}=\frac{z(x^2-y^2)}{(x^2+y^2)^2},\\
+                        F_x&=\sigma_{yx}b_2=\frac{\mu b_1b_2}{2\pi(1-v)}=\frac{z(x^2-y^2)}{(x^2+y^2)^2}\label{两个刃型位错之间的相互作用力},\\
                         F_y&=-\sigma_{xx}b_2=\frac{\mu b_1b_2}{2\pi(1-v)}=\frac{y(3x^2+y^2)}{(x^2+y^2)^2}.
                     \end{align}
 
@@ -1058,7 +1058,7 @@
                 源源不断地产生新的位错圈．当位错圈和晶体表面相截，就形成了台阶，这就是显微镜中所观察到的滑移线．
                 当更多的位错圈和表面相交，中央部分的台阶逐渐变高，并向两侧伸展。
 
-                下面记忆不讨论为了卡东位错源需要多大的应力，为此首先考虑一段弧形位错在滑移力和线张力的
+                下面进一步讨论为了开动位错源需要多大的应力，为此首先考虑一段弧形位错在滑移力和线张力的
                 共同作用下的平衡。设想滑移面上的一端微元位错线$ab$在滑移力$F_\tau$和线张力的共同作用下到达
                 平衡。平衡时，位错线$ab$的张角为$\delta\theta$，曲率半径为$R$，如\autoref{一段弧型位错的平衡}
                 所示。根据静力学
@@ -1081,9 +1081,222 @@
                 \end{equation}
                 将$F_\tau=\tau b$和$T=\frac{1}{2}\mu b^2$代入上式，得到
                 \begin{equation}
-                    \tau=\frac{\mu b}{2R},
+                    \tau=\frac{\mu b}{2R}\autoref{线张力和切应力平衡条件},
                 \end{equation}
                 此式表面，当位错弧线达到平衡时，外加应力与弧线的曲率半径成反比，即位错曲率半径越小，
                 要求与之相平衡的力越大。
+
+                在\autoref{Frank-Read源}中，位错线AB弯曲之后，需要一定大小的切应力与之平衡，
+                曲率约到，相平衡的切应力也越大。当位错线称为半圆形时，曲率达到了最大值，需要的切应力
+                也为最大。可见，一个Frank-Read位错源受到适当切应力作用时，就开始运动和弯曲。
+                起初为了弯曲能继续进行，所需的应力越来越大，直到位错完成半圆形，相应的的应力达到最大值，
+                此后位错向外膨胀，曲率开始缩小，所需的应力也减小。因此位错开动的力取决于\autoref{Frank-Read源}
+                中的(c)图对应的状态，此时的切应力为临界应力，\autoref{线张力和切应力平衡条件}可得临界切应力为
+                \begin{equation}
+                    \tau_c=\frac{\mu b}{2R}=\frac{\mu b}{l},
+                \end{equation}
+                其中$l$为位错线$AB$的长度，假设$l$长为\SI{1e-4}{\cm}，$b$长度为\SI{1e-8}{\cm}，
+                对应的切应力为$10^{-4}\mu$，这和实际晶体的屈服强度接近。
+
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.7\textwidth]{fig/Frank_Read_source_in_a_silicon_crystal.jpg}
+                    \caption{硅晶体中的Frank-Read位错源，通过缀饰法在硅晶体中显示出来的\cite{Dash1958}。}
+                    \label{硅晶体中的Frank-Read位错源}
+                \end{figure}
+
+                \autoref{硅晶体中的Frank-Read位错源}是一个典型的位错源照片\cite{Dash1958}，这个位错元正在释放位错环的时候被缀饰
+                质点固定住了，由于硅是共价键晶体，错排能垒很高，所以位错线表现出明显的取向性。
         \section{实际晶体中的位错}
-        
+            前面我们讨论的位错的各种情况都是基于一个前提，以简单立方为例，而并未联
+            系到晶体的具体结构，同时位错的柏氏矢量均为一个原子间距。但是在实际晶体中由
+            于其具有不同的点阵类型，例如面心立方，体心立方等，其位错类型也会发生变化。
+            首先我们定义全位错为柏氏矢量等于点阵矢量的位错，所以前面我们讨论的问题均是
+            基于全位错\index{全位错}来考虑的。
+            
+                许多金属属于面心立方结构，这样的金属晶体的范性形变和晶体中的位错结构有
+                密切关系，面心立方晶体中位错结构比上面经常作为例子的简单立方晶体中的位错
+                复杂得多。设面心立方结构单位晶胞边长为$a$，点阵矢量$a$为$\langle110\rangle/2$类型，
+                通常简写为$\frac{1}{2}\langle110\rangle$，也是最短的点阵矢量。所以面心
+                立方晶体位错的柏式矢量最可能为$\frac{1}{2}\langle110\rangle$。之前证明
+                位错的能量与$b^2$成正比，所以以$\frac{1}{2}\langle110\rangle$为柏式矢
+                量的位错的应变能低于以$\langle100\rangle$为柏式矢量的位错能量，这就是面心立方
+                结构没有$\langle100\rangle$位错的原因，而$\frac{1}{2}\langle110\rangle$为
+                面心立方结构的单位位错。
+
+                既然位错的应变能与位错的$b^2$成正比，因此一般来讲，最稳定的位错的柏式矢量应该为晶体的
+                最短平移矢量。比如简单立方中的$\langle100\rangle$，面心立方中的$\frac{1}{2}\langle 110 \rangle$，
+                体心立方中的 $\frac{1}{2}\langle 111 \rangle$，密排六方中的 $\frac{1}{3}\langle 11\bar{2}0 \rangle$
+                和 $\langle 0001 \rangle$。
+
+            \subsection{面心立方晶体中的位错和层错}
+
+                对于面心立方来说， $\frac{1}{2}\langle 110 \rangle$型全位错和可以进一步分解，分解
+                产生的柏式矢量小于点阵初基矢量，因而称为偏位错\index{偏位错}。在讨论偏位错之前，最好
+                先了解堆垛层错。堆垛层错是一种面缺陷，由于讨论偏位错的需要，把它放在这里来介绍。
+
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.5\textwidth]{fig/fcc_111.jpeg}
+                    \caption{面心立方晶体单位晶胞以及$(111)面$。}
+                    \label{面心立方晶体单位晶胞以及111面}
+                \end{figure}
+                
+                \autoref{面心立方晶体单位晶胞以及111面}画出来面心立方晶体单胞内的两个相邻的$(111)$面，如果晶体上的原子
+                简化成相切的小球，并且投影到$(111)$面上，则得到\autoref{面心立方111面堆垛}。三个相邻的$(111)$
+                面的原子中心投影位置不同，为了区别，分别记作A、B、C，三个面也叫做A、B、C面。
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.7\textwidth]{fig/pile_up_of_planes_of_fcc_crystal.jpg}
+                    \caption{面心立方的$(111)$堆垛情况。}
+                    \label{面心立方111面堆垛}
+                \end{figure}
+
+                由\autoref{面心立方111面堆垛}可知，$(111)$面的堆垛规律为
+                \begin{equation}
+                    \cdots\cdots ABCABCABC\cdots\cdots 
+                \end{equation}
+                由于晶体的对称性，$(111)$面这种排列规律自然可以推广到所有的$\left\{ 111\right\}$
+                晶面中去。
+
+                晶面的正常堆垛次序被破坏时，就要出现堆垛层错或简称层错\index{层错}
+                的晶格缺陷。面心立方晶体$\left\{ 111\right\}$面两种基本类型的层错
+                可以表示为
+                \begin{equation}
+                    \cdots\cdots ABCACABC\cdots\cdots \label{面心立方层错形式1}
+                \end{equation}
+                和
+                \begin{equation}
+                    \cdots\cdots ABCACBCABC\cdots\cdots \label{面心立方层错形式2}
+                \end{equation}
+                \autoref{面心立方层错形式1}相当于从正常堆垛次序中抽掉一层晶面，因而称为
+                抽出型层错\index{抽出型层错}，层错中心位置位于缺少的晶面上；\autoref{面心立方层错形式2}
+                相当于在正常堆垛次序中加入一层额外晶面，因而称为插入型层错\index{插入型层错}，
+                层错中心位置位于插入的晶面上。
+
+                堆垛层破坏了晶体的完整性，是一种晶格缺陷，引起晶体能量的升高。与单位面积
+                堆垛层错相联系的能量称为层错能\index{层错能}。从\autoref{面心立方层错形式1}
+                和\autoref{面心立方层错形式2}可以看出，层错仅仅破坏了原子的次近邻关系，并
+                没有破坏原子的最近邻关系，也即在层错处，只有从连续三层原子面的关系才能
+                发现与正常堆垛次序的差别，如果仅仅取出相邻的两个原子面来看，无法观察到层错。
+                因此层错虽然具有能量，但是与最近邻原子关系受到破坏的一般晶粒编辑的界面能相比，
+                层错能要小得多。虽然目前理论计算层错能尚未解决，但是有一些估计层错能的实验方法。
+                
+                在薄晶体的电子显微镜衍衬法中，层错会引起特殊的干涉条纹，根据这种效应，
+                可以之间看到层错能较小的晶体和合金中的层错。
+
+                如果层错不贯穿整个晶体，而是中止余晶体内部，它就有一个边界线，如\autoref{Frank_partial_dislocation}
+                所示。为了确定层错边界线的性质，围绕它作一个柏式回路。要注意回路的期待你应该选在层错面上，
+                否则，回路在中途会穿过层错，造成困难。经过用柏式回路方法分析，可以证明上述层错都是具有 
+                $\frac{1}{2}\langle 111 \rangle$小于面心立方晶体的初基矢量，所以这种类型的位错称为
+                Frank偏位错\index{偏位错!Frank偏位错}。一般称与抽出型层错相联系的偏位错为负Frank偏位错，
+                而与插入型层错相联系的偏位错被称为正Frank偏位错。Frank偏位错的柏式矢量与位错线垂直，因而总是
+                刃型，但是它们不能滑移，因为如果滑移，就要离开所在的$(111)$面，并且在经过的路径上造成严重的
+                原子错排，但是它们可以通过吸收或放出点缺陷在包含它们的$(111)$面作攀移运动。
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.5\textwidth]{fig/Formation_of_a_Frank_partial_dislocation.jpg}
+                    \caption{密排面的部分原子缺失导致了$\frac{1}{3}\langle111\rangle$偏位错柏式矢量的形成。}
+                    \label{Frank_partial_dislocation}
+                \end{figure}
+                
+                面心立方晶体中另一种重要的偏位错为Shockley偏位错\index{Shockley偏位错}，柏式矢量为 $\frac{1}{6}\langle 112 \rangle$。
+                \autoref{Shockley偏位错模型}中晶体左上角相对其它部分移动了$\frac{1}{6}[\bar{2}11]$，结果
+                在晶体左侧$(111)$晶面的堆垛次序发生改变，出现了一片与抽出型层错相同的层错。
+                对这篇层错的边界线应用柏式回路方法进行分析，发现它具有的柏式矢量为$\frac{1}{6}[\bar{2}11]$，
+                所以这片层错的边界线就是Shockley偏位错。
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.5\textwidth]{fig/Formation_of_a_Shockley_partial_dislocation.jpg}
+                    \caption{Shockley偏位错模型。}
+                    \label{Shockley偏位错模型}
+                \end{figure}
+                
+                \autoref{Shockley偏位错模型}中的位错为纯刃型位错，根据柏式矢量和位错线夹角的关系，也可以
+                是螺型或是混合型位错，而且Shockley偏位错可以滑移，滑移面就是${111}$面，然而即使是刃型的
+                Shockley偏位错也不能攀移，因为这也会造成严重的错排面。
+
+                关于面心立方的位错总结如\autoref{面心立方的位错类型}
+                \begin{table}[ht]
+                    \begin{center}
+                        \caption{面心立方的位错类型。}
+                        \label{面心立方的位错类型}
+                        \begin{tabular}{cccc}
+                            \toprule
+                            名称&全位错&Shockley偏位错&Frank偏位错 \\
+                            \midrule
+                            柏式矢量& $\frac{1}{2}\langle 110 \rangle$& $\frac{1}{6}\langle 211 \rangle$& $\frac{1}{3}\langle 111 \rangle$ \\
+                            位错线&空间曲线&$\left\{ 111\right\}面上的曲线$&任意曲线\\
+                            类型&3种&3种&仅有刃型\\
+                            运动方式&滑移和攀移&滑移&攀移\\
+                            形成方式&切变&$\left\{ 111\right\}$面上的滑移&插入或抽去一层\\
+                            \bottomrule
+                        \end{tabular}
+                    \end{center}
+                \end{table}
+
+            \subsection{面心立方的扩展位错}
+                面心立方全位错的柏式矢量为$\frac{1}{2}\langle 110\rangle$，可以通过
+                位错翻译在$\left\{ 111\right\}$面上分解为两个Shockley偏位错，例如，在
+                $(111)$面的$\frac{1}{2}[\bar{1}10]$可按
+                \begin{equation}
+                    \frac{1}{2}[\bar{1}10]\to\frac{1}{6}[\bar{2}11]+\frac{1}{6}[\bar{1}2\bar{1}]
+                \end{equation}
+                在分解之后，位错自身的能量减少$\frac{1}{6}$，这在能量上是可行的。而$(111)$面的4个柏式矢量都可以发生分解
+                \begin{equation}
+                    \begin{aligned}
+                    \frac{1}{2}[110]\to\frac{1}{6}[211]+\frac{1}{6}[12\bar{1}]\\
+                    \frac{1}{2}[\bar{1}01]\to\frac{1}{6}[\bar{2}11]+\frac{1}{6}[\bar{1}\bar{1}2]\\
+                    \frac{1}{2}[0\bar{1}1]\to\frac{1}{6}[1\bar{2}1]+\frac{1}{6}[\bar{1}\bar{1}2]
+                    \end{aligned}
+                \end{equation}
+                如\autoref{111面的全位错分解为Shockley偏位错}所示。
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.5\textwidth]{fig/perfect_burgers_vector_to_shockley_partial_vector.jpg}
+                    \caption{${111}$面的全位错分解为Shockley偏位错。}
+                    \label{111面的全位错分解为Shockley偏位错}
+                \end{figure}
+
+                两个偏位错柏式矢量的夹角小于$\frac{\pi}{2}$可知，它们是互相排斥的；另一方面
+                层错的表面张力却要求他们尽量靠近。随着两个片尾错的原理，相互排斥了逐渐降低，直到层错表面张力相等，位错
+                之间的距离不再变化，这个平衡距离就是扩展位错的的扩展宽度。如果
+                原位错与其柏式矢量的夹角为$\psi$，则两偏位错与柏式矢量的夹角分别为$\psi+\frac{\pi}{6}$
+                和$\psi-\frac{\pi}{6}$，两个位错都化成刃型位错和螺型位错的分量，然后利用 \autoref{两个螺型位错之间的作用力}
+                和\autoref{两个刃型位错之间的相互作用力}，可以得到，片尾错之间的排斥力为
+                \begin{equation}
+                    F_{12}=\frac{\mu b^2(2-v)}{8\pi d(1-v)}\left[ 1-\frac{2v}{2-v}\cos{2\psi} \right],
+                \end{equation}            
+                其中$d$为两位错间距，$b$为偏位错强度。平衡时，$F_{12}$等于层错的表面
+                张力，而表面张力与层错能$\gamma$像等，所以$F_{12}=\gamma$，代入上式，
+                解出扩展宽度为
+                \begin{equation}
+                    d=\frac{\mu b^2(2-v)}{8\pi \gamma(1-v)}\left[ 1-\frac{2v}{2-v}\cos{2\psi} \right],
+                \end{equation}
+                由此可见，位错的扩展宽度与层错能成反比。
+
+                扩展位错的运动很简单，实际上就是两个偏位错的运动。但是如果扩展位错是由
+                螺型位错分解而来，它还可以进行交滑移。这时扩展位错交滑移分两步：束集（扩展位
+                错合并成全位错），交滑移（螺位错变换滑移面的运动），如\autoref{扩展位错的交滑移过程}所示。
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.7\textwidth]{fig/Four_stages_in_the_cross_slip_of_a_dissociated_dislocation.jpg}
+                    \caption{螺位错从$(111)$面转移到$(11\bar{1})$面的四个过程。}
+                    \label{扩展位错的交滑移过程}
+                \end{figure}
+                扩展位错交割时也先束集。所以层错能小，扩展位错宽度大，不易束集，不易运
+                动，不易交割。
+            \subsection{面角位错}
+                
+                假设在两个不同的$\left\{ 111\right\}$滑移面上有两个完整位错，如\autoref{压杆位错的形成}所示。
+                如果两个位错在滑移过程中相交，形成一个新的位错$\frac{1}{2}[0\bar{1}1]$，由原来的两个柏式矢量相加得到。
+                而且是一个刃型位错。这个面上的点阵阻力很大，无法滑移，这和位错也成为面角位错\index{面角位错}。
+                \begin{figure}[ht]
+                    \centering
+                    \includegraphics[width=0.7\textwidth]{fig/Formation_of_a_Lomer_sessile_dislocation.jpg}
+                    \caption{压杆位错的形成。}
+                    \label{压杆位错的形成}
+                \end{figure}
+
+                若为两个扩展位错相遇，则领头的两个位错合成新位错，滑移面由于阻力大而不能滑移。
+                两个跟着的扩展位错也将受牵制而不动，组态不动，成为其它滑移的障碍物，面角位错也是加工硬化现象的一个重要原因。
