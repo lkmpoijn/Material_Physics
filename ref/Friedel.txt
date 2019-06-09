@@ -1,0 +1,11 @@
+@book{book:1106816,
+   title =     {Dislocations},
+   author =    {J. Friedel, R. Smoluchowski and N. Kurti (Auth.)},
+   publisher = {Pergamon},
+   isbn =      {978-0-08-013523-6},
+   year =      {1964},
+   series =    {},
+   edition =   {},
+   volume =    {},
+   url =       {http://gen.lib.rus.ec/book/index.php?md5=767a577fc28417ef529b3dbc1152e1f5}
+}

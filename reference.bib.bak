@@ -61,4 +61,20 @@ abstract = "Grain boundaries (GBs) provide a strengthening mechanism in engineer
   author    = {Ngan, AHW},
 }
 
+@Book{余宗森1982高等学校教学用书,
+  title     = {金属物理},
+  publisher = {冶金工业出版社},
+  year      = {1982},
+  author    = {余宗森 and 田中卓 and others},
+}
+
+@Book{book:1106816,
+  title     = {Dislocations},
+  publisher = {Pergamon},
+  year      = {1964},
+  author    = {J. Friedel, R. Smoluchowski and N. Kurti (Auth.)},
+  isbn      = {978-0-08-013523-6},
+  url       = {http://gen.lib.rus.ec/book/index.php?md5=767a577fc28417ef529b3dbc1152e1f5},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
