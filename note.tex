@@ -144,16 +144,20 @@ spanning style={very thick,decoration=penciline,decorate}]%
 
 
 
-\tableofcontents
-\addcontentsline{toc}{chapter}{目录}
 
 \clearpage
+
 \chapter*{前言}
-	本笔记内容来自材料物理课程材料，以及余宗森先生的《金属物理》\cite{余宗森1982高等学校教学用书}，Hull的《位错导论》\cite{HULL201143}和R.E. Smallman等人
+	本笔记内容来自材料物理课程材料，主要为王学敏老师所教授的部分，而高克玮老师的讲义相对完善，不包含在本笔记内，如有需要，可以尝试完成文件夹中尚未
+	完成的三个文档，分别为\href{https://github.com/lkmpoijn/Material_Physics/blob/origin/Chapters/solid_solution.tex}{solid\_solution.tex}、
+	\href{https://github.com/lkmpoijn/Material_Physics/blob/origin/Chapters/diffusion.tex}{diffusion.tex}和
+	\href{https://github.com/lkmpoijn/Material_Physics/blob/origin/Chapters/phase_transformation.tex}{phase\_transformation.tex}。
+	
+	参考文献主要是余宗森先生的《金属物理》\cite{余宗森1982高等学校教学用书}，Hull的《位错导论》\cite{HULL201143}和R.E. Smallman等人
 	的《物理冶金学》\cite{ngan2007physical}。
 
 	这个项目的最初的目的其实仅仅是整理笔记，后来发现一些讲义上不太清晰的内容，又结合其它的资料，然后才形成这个笔记。为了方便他人阅读，
-	于是使用\LaTeX 来完成这个这个项目。由于参考了一些没有找到来源的资料，没有在最后的参考文献标出，因此，如果有侵权问题，
+	于是使用\LaTeX 来完成这个项目。由于参考了一些没有找到来源的资料，没有在最后的参考文献标出，因此，如果有侵权问题，
 	请及时通知本人。
 
 	文章的图片大部分修改自Hull的《位错导论》\cite{HULL2011137}，除非完全不改动，之后就不再用参考文献标出。
@@ -162,18 +166,23 @@ spanning style={very thick,decoration=penciline,decorate}]%
 	关于\emph{Github}和\LaTeX 的使用方法，请自行在网络上搜索，特别提醒，不要使用百度。
 
 	在本学期后，不会再更新这个项目，除非是重大情况，如果有同学相要继续完成这个项目，可以联系提出issue来催我转移项目。
+
+\tableofcontents
+\addcontentsline{toc}{chapter}{目录}
+	
+
 \part{晶体缺陷}
 	\input{Chapters/point_defect.tex}
 	\input{Chapters/line_defect.tex}
-	\input{Chapters/planet_defect.tex}
+	\input{Chapters/plane_defect.tex}
 \part{性能强化}
 	\input{Chapters/plastic_deformation.tex}
 	\input{Chapters/working_harding_annealing.tex}
 	\input{Chapters/alloy_strengthening.tex}
-\part{固溶体、扩散与相变}
-	\input{Chapters/solid_solution.tex}
-	\input{Chapters/diffusion.tex}
-	\input{Chapters/phase_transformation.tex}
+%\part{固溶体、扩散与相变}
+%	\input{Chapters/solid_solution.tex}
+%	\input{Chapters/diffusion.tex}
+%	\input{Chapters/phase_transformation.tex}
 \part{考试内容}
 	\input{Chapters/problem.tex}
 \clearpage

@@ -815,25 +815,122 @@
                 \subsubsection{攀移力}
                     假设一小部分的位错线$l$沿半原子面方向发生位移$s$，此时发生的体积变化为
                     \begin{equation}
-                        \dif V=b\cdot l\times s,
+                        \dif V=b\cdot l\times s=s\cdot b\times l,
                     \end{equation}
+                    面积微元为$\dif S=\dif V/s$，受力为
+                    \begin{equation}
+                        F=\sigma_{yy}\dif S,
+                    \end{equation}
+                    发生攀移所做的功为
+                    \begin{equation}
+                        \dif W=F\cdot s=\sigma_{yy} s\dif S=\sigma_{yy}slb,
+                    \end{equation}
+                    假设位错的攀移力为$F_c$，此过程中做功为
+                    \begin{equation}
+                        \dif W=F_c\cdot l\cdot s,
+                    \end{equation}
+                    所以位错的攀移力为
+                    \begin{equation}
+                        F_c=-\sigma_{yy}\cdot b.
+                    \end{equation}
+                    
+                    这一过程需要扩散，因此也需要热激活，因此攀移一般发生在较高的温度下。
+                \subsection{位错攀移阻力和化学力}
                     假设一个原子所占的体积为$\Omega$，则填补$\dif V$的空隙需要$\dif V/\Omega$个
                     点缺陷，假设$\Omega=b^3$，所以原子数为
                     \begin{equation}
                         \dif n=\frac{ls}{b^2}.
                     \end{equation}
-                    这一过程需要扩散，因此也需要热激活，因此攀移一般发生在较高的温度下。
-                \subsection{位错攀移阻力和化学力}
+
                     假设攀移阻力为$F_z$，则攀移形成体积$\dif V$所需的功为
                     \begin{equation}
-                        W=F_z\cdot\dif V,
+                        W=\sigma_{yy}\cdot\dif V,
                     \end{equation}
-                    需要的原子数为$\dif n=\dif V/\dif \Omega$。
+                    需要的原子数为$\dif n=\dif V/\Omega$。
 
                     假设点缺陷形成能为$E_f$，则填补$\dif V$的形成能为
                     \begin{equation}
-                        \dif n\cdot E_F=\frac{E_f ls}{b^2}=
+                        \dif n\cdot E_F=\frac{E_f ls}{b^2}=F_z\cdot s=-\sigma_{yy}lsb,
                     \end{equation}
+                    因此有
+                    \begin{equation}
+                        F_z=\frac{E_f}{b^2}=-\sigma_{yy}b,
+                    \end{equation}
+                    因此空位形成能与应力的关系为
+                    \begin{equation}
+                        \sigma_{yy}=\frac{E_f}{b^3},
+                    \end{equation}
+                    一般来讲，空位形成能为
+                    \begin{equation}
+                        E_f=\frac{\mu b^3}{5}.
+                    \end{equation}
+
+                    如果晶体中存在过饱和空位，这时单位时间内体哦啊到位错上的空位数
+                    就要超过离开的位错数，从而产生位错攀移的驱动力，这种里称为化学力。
+                    假设在某一温度下，晶体的空位平衡浓度为$c_v$，而实际浓度为$c$，则空位的化学势，即
+                    与一个空位消失与位错相关的自由能变化为
+                    \begin{equation}
+                        \mu_v=\frac{\partial F}{\partial n}=kT\ln\frac{c}{c_0},
+                    \end{equation}
+                    单位为错攀移单位距离时，所需的空位数为$1/b^2$，相应的自由能变化就被
+                    定义为单位长度位错线所受的化学攀移力，即
+                    \begin{equation}
+                        F_c=\frac{1}{b^2}kT\ln\frac{c}{c_0}.
+                    \end{equation}
+                \subsection{位错的一般力公式}
+                    $\dif l$的位错受到空间力场$\sigma$的作用，在滑移面A上运动$\dif s$
+                    距离，此时的滑移面积为$\dif A=\dif l\cdot\dif s$。设$\vec{n}$为A面法线，
+                    对应矢量为$(n_x,n_y,n_z)$，空间中一个面积元为
+                    \begin{equation}
+                        \dif A =n \cdot\dif A.
+                    \end{equation}
+                    
+                    空间中的应力场包括三个正应力、六个切应力，用应力张量表示
+                    \begin{equation}
+                        \sigma=\begin{bmatrix}
+                            \sigma_{xx}&\tau_{xy}&\tau_{xz}\\
+                            \tau_{yx}&\sigma_{yy}&\tau_{yz}\\
+                            \tau_{zx}&\tau_{zy}&\sigma_{zz}
+                        \end{bmatrix}.
+                    \end{equation}
+                    则空间中任意斜面的总外力为
+                    \begin{equation}
+                        F=\sigma\cdot n\dif A,
+                    \end{equation}
+                    外力使该面移动b所做的功为
+                    \begin{equation}
+                        W=b\cdot\left( \sigma\cdot n\dif A \right)=b\left[ \sigma\cdot(\dif l\times\dif s) \right]\cdot\dif s,
+                    \end{equation}
+                    根据矢量叉乘的性质可以变成
+                    \begin{equation}
+                        W=\left( b\sigma\times\dif l \right)\dif s,
+                    \end{equation}
+                    设作用在位错上的力为$\dif F$，滑移矢量为$\dif s$，柏式矢量为$\vec{b}$，
+                    则$\dif F$做功为
+                    \begin{equation}
+                        W=\dif F\cdot\dif s=\left( b\sigma\times\dif l \right)\dif s,
+                    \end{equation}
+                    因此
+                    \begin{equation}
+                        \dif F=b\sigma\times\dif l,
+                    \end{equation}
+                    如果令$t$为$\dif l$的单位向量，则可以写为
+                    \begin{equation}
+                        \dif F=b\sigma\times t.
+                    \end{equation}
+                    所以位错运动受力的特点为：
+                    \begin{itemize}
+                        \item[1] 受力方向总与位错线垂直；
+                        \item[2] 位错受力与外力方向不一致。
+                    \end{itemize}
+                \subsection{位错像力}
+                    在研究半无限大介质中的一个位错时，这个位错和介质的表面平行，距离表面的距离为$l$，
+                    根据位错应力场计算的结果在表面存在应力，但是实际上表面的总应力应当为零，这就需要在
+                    以表面为对称的位置上存在一个想象的柏式矢量相反的位错，这样才能满足边界条件。
+
+                    实际上产生这项吸引力的原因是位错倾向于接近自由表面以松弛其弹性应变能。
+                    按照组态力的概念我们用一个力来描述系统自由能降低的趋势，这个力就是像力。
+                    更为具体的分析结果可以通过\href{https://brilliant.org/wiki/greens-functions-in-physics/}{Green函数}来分析。
         \section{位错与晶体缺陷间的相互作用}
             由于晶体中的位错具有长程应力场，当晶体中同时存在有其他晶体缺陷时，同样
             地这些缺陷改变了原子的规则排列，从而在晶体中引入了畸变，它们之间就会发生相
@@ -1026,8 +1123,8 @@
                 \subsubsection{化学相互作用}
                     以上讨论的都是全位错和溶质原子通过位错的应力场和溶质原子产生的体膨胀或畸变发生作用。现在阐述另一种不同的作用，全位错分解为不全位错，
                     ，其间有层错，在层错区溶质原子的浓度（平衡时）应该不同于基体中的溶质浓度。
-                    这种作用首先被suzuki所认识，称为化学作用。
-                    当位错运动时，这种不均匀分布的溶质原子也将随位错移动，因此这种组态通常称为suzuki气团（铃木气团）\index{铃木气团}。
+                    这种作用首先被Suzuki所认识，称为化学作用。
+                    当位错运动时，这种不均匀分布的溶质原子也将随位错移动，因此这种组态通常称为Suzuki气团（铃木气团）\index{铃木气团}。
 
         \section{位错的增殖}
             \subsection{位错起源}
