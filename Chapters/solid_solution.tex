@@ -235,10 +235,85 @@
         有合适的比例。然而在形成过程中，组态熵随固溶体的有序度增加而下降，这会对有
         序固溶体的形成造成阻力。
 
-        在一定的温度范围内，可能发生有序-无序转变，也就是第二类相变。
+        在一定的温度范围内，可能发生有序-无序转变，也就是第二类相变。一般是不同原子在结合
+        后的能量低于未结合的能量时发生。在高温下，有序的小原子群
+        不断地形成和消失，在冷却过程中，短程有序得到更大的发展。达到临界温度$T_c$时，这些
+        小原子群长大，形成有序畴\index{有序畴}。如果相邻的有序畴是反向的，这被称为反向畴\index{反向畴}。
+        由于体系倾向与不同原子成键，因此在畴内同种原子之间几乎不成键，只有在畴界面上才会成键，如\autoref{畴界面上原子}所示。
+
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.5\textwidth]{fig/bands_near_domian_boundry.jpg}
+            \caption{在畴界面上原子的成键情况，其中同种原子成键仅有9对，异种原子成键有51对。}
+            \label{畴界面上原子}
+        \end{figure}
+
+        温度低于临界温度$T_c$时，畴壁不再稳定，反向畴吞并长大，长程有序，成为超结构\index{超结构}。
+        \num{1e4}个原子以上时，会出现超结构线条。
+
+
         \subsection{有序固溶体的晶体结构}
+            有序性随温度的变化而变化，当温度高于临界温度$T_c$时，体系的内能增加，根据
+            \begin{equation}
+                F=E-TS,
+            \end{equation}
+            想要使体系的自由能降低，体系必须向熵增的方向发展，因此结构也就会逐渐无序化。    
+            在临界温度一下，有序结构可以存在一定成分范围内，只有特定成分才能达到完全有序。
+            实际的有序化还分为长程有序和短程有序。
         \subsection{有序度参数}
+            假设体系中$N_{AB}$为$AB$键的数目，定义短程序参数
+            \begin{equation}
+                \alpha_1=1-\frac{N_{AB}}{N_{AB}^*},
+            \end{equation}
+            当形成AB键的能量小于形成相同数量AA键和BB键的能量时，$V<0$，此时$N_{AB}>N^*_{AB}$，$\alpha_1<0$，
+            为短程序状态；当$V=0$时，$\alpha_1=0$，是完全无序状态；当$V>0$时，$\alpha_1>0$，
+            是同类原子偏聚状态。
+
+            这一参数虽然能够描述体系的短程有序化程度，但是在短程序时，参数为负值，这对实际
+            使用造成了障碍，因此Bethe引入了另一个短程序参数$\sigma$，定义为
+            \begin{equation}
+                \sigma=\frac{N_{A B}-N_{A B}^{*}}{\left(N_{A B}\right)_{\max }-N_{A B}^{*}},
+            \end{equation}
+            其中$\left( N_{AB} \right)_{\mathrm{max}}$为完全有序时AB键的个数。当体系完全有序时，
+            $\sigma=1$；完全无序时，$\sigma=0$。
+
+            在定义长程序参数之前，先假设格点分为$\alpha$、$\beta$两类，其中A原子占据
+            $\alpha$格点位置，B原子占据$\beta$位置。令A原子占据某一$\alpha$位置的几率为
+            $P_A^\alpha$，则长程序参数$\phi$定义为
+            \begin{equation}
+                \varphi=\frac{P_{A}^{\alpha}-C_{A}}{1-C_{A}}=\frac{P_{B}^{\beta}-C_{B}}{1-C_{B}}\label{长程序参数},
+            \end{equation}
+            其中$P_A^\alpha$、$P_B^\beta$分别是A、B原子占据$\alpha$、$\beta$点阵的几率。
+            当体系完全有序时，$\phi=1$，体系完全无序时，$\phi=0$。
         \subsection{长程序的统计理论}
+            以$\beta$黄铜为例，用准化学方法讨论其长程序。$\beta$黄铜是\ce{CuZn}合金，各占50\%at.，
+            晶体为bcc结构，由两个互相穿插的简单立方点阵$\alpha$、$\beta$构成。
+
+            当$c=\frac{1}{2}$时，根据\autoref{长程序参数}，A原子处于$\alpha$位置和$\beta$位置的概率为
+            \begin{align}
+                P_{A}^{\alpha}&=\frac{1+\varphi}{2},\\
+                P_{A}^{\beta}&=\frac{1-\varphi}{2},
+            \end{align}
+            同理可得B原子处于不同位置的概率。
+
+            假设原子总数为$N$，则\ce{Cu}、\ce{Zn}各有$N/2$个，其中处于$\alpha$位置的
+            A原子数目为$P_{A}^{\alpha} \cdot \frac{N}{2}=\frac{N}{4}(1+\varphi)$，
+            处于$\beta$位置的A原子数目为$P_{A}^{\beta} \cdot \frac{N}{2}=\frac{N}{4}(1-\varphi)$，
+            同理可得处于$\alpha$、$\beta$位置的B原子数目。
+
+            以AA键为例，AA键的数目等于在$\alpha$位置上出现的$A$原子的概率乘以$\beta$位置上出现的
+            A原子的概率乘以配位数。体系内AA、BB和AB键的数目分别为
+            \begin{align}
+                N_{A A}&=\frac{N}{4}(1+\varphi) \cdot \frac{1-\varphi}{2} \cdot Z=\frac{N Z}{8}\left(1-\varphi^{2}\right) \\
+                N_{B B}&=\frac{N Z}{8}\left(1-\varphi^{2}\right) \\
+                N_{A B}&=\frac{N}{4}(1+\varphi) \cdot \frac{1+\varphi}{2} \cdot Z+\frac{N}{4}(1-\varphi) \cdot \frac{1-\varphi}{2} \cdot Z=\frac{N Z}{4}(1+\varphi^2).
+            \end{align}
+            因而，内能与有序度$\varphi$的关系为
+            \begin{align}
+                E_{0}&=N_{A A} V_{A A}+N_{B B} V_{B B}+N_{A B} V_{A B} \\
+                &=\frac{N Z}{8}\left[V_{A A}+V_{B B}+2 V_{A B}\right]+\frac{N Z}{8} \varphi^{2}\left[2 V_{A B}-V_{A A}-V_{B B}\right].
+            \end{align}
+        
         \subsection{有序化对合金性能的影响}
     \section{中间相}
         \subsection{电子化合物}
