@@ -6,7 +6,7 @@
 
 1. xelatex,
 2. bibtex,
-3. makeindex,
+3. zhmakeindex,
 4. xelatex,
 5. xelatex
 
@@ -18,7 +18,6 @@
 
 2019-06-10
 
-- [ ] 固溶体
+- [x] 固溶体
 - [ ] 扩散
 - [ ] 相变
-
