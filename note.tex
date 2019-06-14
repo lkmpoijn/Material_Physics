@@ -146,7 +146,10 @@ spanning style={very thick,decoration=penciline,decorate}]%
 
 
 \clearpage
-
+\frontmatter
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{前言}
 \chapter*{前言}
 	本笔记内容来自材料物理课程材料，主要为王学敏老师所教授的部分，而高克玮老师的讲义相对完善，不包含在本笔记内，如有需要，可以尝试完成文件夹中尚未
 	完成的三个文档，分别为\href{https://github.com/lkmpoijn/Material_Physics/blob/origin/Chapters/solid_solution.tex}{solid\_solution.tex}、
@@ -167,10 +170,13 @@ spanning style={very thick,decoration=penciline,decorate}]%
 
 	在本学期后，不会再更新这个项目，除非是重大情况，如果有同学相要继续完成这个项目，可以联系提出issue来催我转移项目。
 
-\tableofcontents
+\cleardoublepage
+\phantomsection
 \addcontentsline{toc}{chapter}{目录}
-	
+\tableofcontents
 
+
+\mainmatter
 \part{晶体缺陷}
 	\input{Chapters/point_defect.tex}
 	\input{Chapters/line_defect.tex}
@@ -187,9 +193,20 @@ spanning style={very thick,decoration=penciline,decorate}]%
 \part{考试内容}
 	\input{Chapters/problem.tex}
 \clearpage
-\printindex
+
+\backmatter
+
+
+%\cleardoublepage
+\phantomsection
 \addcontentsline{toc}{chapter}{索引}
+\printindex
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{参考文献}
 \bibliographystyle{unsrt}
 \bibliography{reference.bib}
-\addcontentsline{toc}{chapter}{参考文献}
+
+
 \end{document}
