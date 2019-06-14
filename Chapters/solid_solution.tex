@@ -143,7 +143,7 @@
                     E_{0}&=V_{A A} N_{A A}+V_{B B} N_{B B}+V_{A B} N_{A B}\\
                     &=\frac{1}{2} N Z\left[(1-c)^{2} \cdot V_{A A}+c^{2} \cdot V_{B B}+2 c(1-c) \cdot V_{A B}\right]\\
                     &=\frac{1}{2} N Z\left[c V_{B B}+(1-c) V_{A A}+c(1-c)\left(2 V_{A B}-V_{A A}-V_{B B}\right)\right].
-                \end{aligned}
+                \end{aligned}\label{固溶体内能与成键关系的一般表达式}
             \end{equation}
             前两项为纯A和纯B的内能，第三项为固溶后内能的改变量$\Delta E$。
             固溶体的形成能为
@@ -258,7 +258,7 @@
                 F=E-TS,
             \end{equation}
             想要使体系的自由能降低，体系必须向熵增的方向发展，因此结构也就会逐渐无序化。    
-            在临界温度一下，有序结构可以存在一定成分范围内，只有特定成分才能达到完全有序。
+            在临界温度以下，有序结构可以存在一定成分范围内，只有特定成分才能达到完全有序。
             实际的有序化还分为长程有序和短程有序。
         \subsection{有序度参数}
             假设体系中$N_{AB}$为$AB$键的数目，定义短程序参数
@@ -313,9 +313,60 @@
                 E_{0}&=N_{A A} V_{A A}+N_{B B} V_{B B}+N_{A B} V_{A B} \\
                 &=\frac{N Z}{8}\left[V_{A A}+V_{B B}+2 V_{A B}\right]+\frac{N Z}{8} \varphi^{2}\left[2 V_{A B}-V_{A A}-V_{B B}\right].
             \end{align}
-        
-        \subsection{有序化对合金性能的影响}
+            对于\autoref{固溶体内能与成键关系的一般表达式}，当$c=\frac{1}{2}$时，可得
+            \begin{equation}
+                E_{0}=\frac{N Z}{8}\left[V_{A A}+V_{B B}+2 V_{A B}\right],
+            \end{equation}
+            当体系处于完全无序状态，也就是$\varphi=0$，两个内能表达式相同，因此有序化引起的内能该变量
+            为
+            \begin{equation}
+                \frac{N Z}{8} \varphi^{2}\left[2 V_{A B}-V_{A A}-V_{B B}\right]=\frac{NZV}{4}\varphi^2,
+            \end{equation}
+            由于$V<0$，所以上式小于零，也就是\textbf{有序化使内能下降}。
+
+            对于$\alpha$点阵内有$\frac{N}{2}$个位置，亚点阵有$N(1+\varphi)/4$个A原子，$N(1-\varphi)/4$个
+            B原子，均为随机分布，所以$\alpha$亚点阵的组态数为
+            \begin{equation}
+                \omega_\alpha=\frac{\frac{N}{2} !}{\frac{N}{4}(1+\varphi) ! \frac{N}{4}(1-\varphi) !},
+            \end{equation}
+            同理$\omega_\beta=\omega_\alpha$，系统的组态数为
+            \begin{equation}
+                \omega=\omega_\alpha\cdot\omega_\beta,
+            \end{equation}
+            系统的混合熵为
+            \begin{equation}
+                \begin{aligned}
+                \Delta S_{m}&=k \ln W \\
+                    &=-N k\left[\frac{1+\varphi}{2} \ln \frac{1+\varphi}{2}+\frac{1-\varphi}{2} \ln \frac{1-\varphi}{2}\right].
+                \end{aligned}
+            \end{equation}
+            当$\varphi=0$时，与以前讲固溶体自由能结果相同
+            \begin{equation}
+                \Delta S_{m}=-Nk\left( \frac{1}{2}\ln\frac{1}{2}+\frac{1}{2}\ln\frac{1}{2} \right),
+            \end{equation}
+            当$\varphi=1$时，体系完全有序，组态数只有1种，$\ln1=0$，体系熵为零，因此随有序度增加，熵值降低。
+
+            体系的自由能为
+            \begin{equation}
+                F=\frac{N Z}{8}\left[V_{A A}+V_{B B}+V_{A B}\right]+\frac{N Z V}{4} \varphi^{2}+N k T\left[\frac{1+\varphi}{2} \ln \frac{1+\varphi}{2}+\frac{1-\varphi}{2} \ln \frac{1-\varphi}{2}\right],
+            \end{equation}
+            当$\frac{\dif F}{\dif \varphi}=0$时，
+            \begin{equation}
+                \frac{\dif F}{\dif \varphi}=\frac{1}{2} N Z V \varphi+\frac{N R T}{2} \ln \frac{1+\varphi}{1-\varphi}=0
+            \end{equation}
+            由此可以求出临界温度
+            \begin{equation}
+                T_c=-\frac{ZV}{2k},
+            \end{equation}
+            代入$\frac{\dif F}{\dif \varphi}=0$，得到
+            \begin{equation}
+                2\varphi\frac{T_c}{T}=\ln\frac{1+\varphi}{1-\varphi}
+            \end{equation}
+            也就是温度和有序化的关系。
+        %\subsection{有序化对合金性能的影响}
     \section{中间相}
+        已经发现的中间相数以千计，键合性质各不相同，按控制形
+        成化合物的因素分类可分为化学化合物三种
         \subsection{电子化合物}
         \subsection{正常价化合物}
         \subsection{尺寸因素化合物}
