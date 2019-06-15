@@ -21,7 +21,7 @@
                 \label{环行扩散的两种机制}
             \end{figure}
         \subsection{空位扩散}
-            \textbf{空位扩散}\index{空位扩散}，对于晶体中存在的空位，空位周围的原子都是向空位进行扩散，
+            \textbf{空位扩散}\index{空位扩散}对于晶体中存在的空位，空位周围的原子都是向空位进行扩散，
             扩散后形成新的空位。
         \subsection{挤列扩散}
             \textbf{挤列扩散}\index{挤列扩散}是在$n$个原子位置上挤进去一个原子，容纳了$n+1$个原子位置上挤进去一个原子，容纳了并作为
@@ -33,7 +33,7 @@
                 J=-D\left( \frac{\partial c}{\partial x} \right)\label{Fick第一定律},
             \end{equation}
             上式称为\textbf{Fick第一定律}\index{Fick第一定律} ，其中 $J$为\textbf{扩散通量}\index{Fick第一定律!扩散通量}，
-            是某一时刻通过垂直于$x$轴的单位平面原子的通量；\textbf{扩散系数}\index{Fick第一定律!扩散系数}，
+            是某一时刻通过垂直于$x$轴的单位平面原子的通量；\textbf{扩散系数}\index{Fick第一定律!扩散系数}
             表示单位浓度梯度下的通量，上式表明，扩散方向与梯度方向相反。
             习惯上，\autoref{Fick第一定律}中各个量的单位为
             \begin{table}[ht]
@@ -91,7 +91,7 @@
             对于不同的类型，可以分为稳态扩散和非稳态扩散，其中\textbf{稳态扩散}\index{稳态扩散}
             是指空间各点的浓度不随时间发生变化，这种状态称为稳态扩散；\textbf{非稳态扩散}\index{非稳态扩散}是指
             空间中各点浓度随时间发生变化。
-            \subsection{第一类稳态扩散}
+            \subsubsection{第一类稳态扩散}
                 首先来看稳态扩散，假设扩散系数为常数，浓度不随时间发生变化。
                 容器中间有金属薄板，薄板的一面保持高而恒定的浓度，另一面保
                 持低而恒定的浓度，因此在金属板中存在浓度梯度。假设器壁不可渗透，
@@ -157,8 +157,7 @@
                 \begin{equation}
                     \frac{\partial c}{\partial t}=D \frac{\partial^{2} c}{\partial x^{2}}.
                 \end{equation}
-                这一公式可以解决两种模型，分别为\textbf{瞬时平面源}\index{瞬时平面源}和
-                \textbf{一维半无限模型}\index{一维半无限模型}（也称为叠加法）。
+                这一公式可以解决两种模型，分别为\textbf{瞬时平面源}\index{瞬时平面源}和\textbf{一维半无限模型}\index{一维半无限模型}（也称为叠加法）。
 
                 对于瞬时平面源模型，假设两块足够长的相同纯金属，其中
                 一块端面上涂上同位素（作为扩散面源），对接起来组成扩散偶，假设扩散系数为常数
@@ -206,3 +205,158 @@
                 上式称为\textbf{Arrhenius关系}\index{Fick第二定律!扩散系数!Arrhenius关系}，其中$Q$为
                 扩散激活能，式中$Q$、$D_0$与温度无关，与成分、结构有关。
             \subsubsection{第二类非稳态扩散}
+                这一类问题研究$D$随浓度变化的全无限长的一维扩散。如果将铜和
+                黄铜对接起来，组成浓度差很大的扩散偶，则D因浓度而变。\ce{Zn}的浓度初始分布为
+                $x>0$，$c=c_0$，$x<0$，$x=0$，对此解偏微分方程
+                \begin{equation}
+                    \frac{\partial c}{\partial t}=\frac{\partial }{\partial x}\left( D\frac{\partial c}{\partial x} \right),
+                \end{equation}
+                某处浓度为$c_1$，求得其扩散系数
+                \begin{equation}
+                    D_{c_1}=-\frac{1}{2t}\left.\frac{\dif x}{\dif c}\right\vert_{c=c_1}\cdot\int_{0}^{c_1}x\dif c\label{扩散系数随浓度变化关系},
+                \end{equation}
+                式中$\frac{\dif x}{\dif c}\vert_{c=c_1}$为$c-x$曲线上$c=c_1$处的斜率，$\int_{0}^{c_1}x\dif c$为积分面积。
+                这样可以解决扩散系数问题，但是$\int_{0}^{c_1}x\dif c$中，$x$的原点不一定是是原始的焊接面，
+                因此在求解扩散系数时必须先确定\textbf{Matano面}\index{Matano面} ，也就是在这个面两侧的$c-x$曲线积分面积相等，
+                也就是$\int_{0}^{c_1}x\dif c=0$，为了区分Matano面和原始焊接面，后者记作$x'=0$。因此在
+                实际中求解某处的扩散系数一般要四步
+                \begin{itemize}
+                    \item[1] 在一定温度$T$下，是扩散偶退火一定时间$t$，分析浓度$c$，作出$c-x$曲线；
+                    \item[2] 使两边积分面积相等，确定Matano面；
+                    \item[3] 求$c_1$处的切线斜率和积分面积$\int_{0}^{c_1}x\dif c$；
+                    \item[4] 代入\autoref{扩散系数随浓度变化关系}，求出$D_{c_1}$。
+                \end{itemize}
+
+                关于Matano面，有以下两点结论：
+                \begin{itemize}
+                    \item[1] 扩散过程中，体积保持不变时，焊接面和Matano面一致；
+                    \item[2] Matano面分割物质的流动体积，使一边流出的物质量等于另一边流入的量。
+                \end{itemize}
+            \subsubsection{均匀化速率问题}
+                在实际中，经常遇到不均匀合金的均匀化问题，如奥氏体化时第
+                二相的溶解速度问题，铸态合金的均匀化问题\index{均匀化问题}等。
+
+                在不均匀合金中，如果浓度沿某一方向呈周期性变化，则合金的初始浓度分布可以用下式来表示
+                \begin{equation}
+                    c(x)=c_0+c_m\cos\left( \frac{\pi x}{l} \right).
+                \end{equation}
+                对于这一类问题的Fick方程的解为
+                \begin{equation}
+                    c(x, t)=c_{0}+c_{m} \cos \left(\frac{\pi x}{l}\right) \exp \left(-\frac{t}{\tau}\right),
+                \end{equation}
+                其中$\tau=\frac{l^2}{\pi^2D}$称为\textbf{弛豫时间}\index{均匀后问题!弛豫时间}。减少弛豫时间
+                可以加速体系均匀化，可以采用升高温度或减少长度的方法，由于温度的改变导致扩散系数的改变对结果的影响
+                不大，因此主要采用减少长度的方法，因此需要快冷、锻打。
+    
+    \section{原子迁移和扩散系数}
+        \subsection{扩散系数的统计性}   
+            扩散的宏观现象是由大量原子的无数次随机行走造成的。只有用统计概念才能计算扩散系数。
+            之前的Fick定律认为体系的扩散方向为顺浓度方向，然而实际中还存在着"上坡"扩散这样的
+            例外，这只能从能量角度来解释，也就是说，扩散的真正驱动力为化学位梯度而不是浓度梯度。
+
+            对于两个临近晶面，原子面密度分别为$n_1$和$n_2$，假设每次迁移的距离都是$\alpha$，
+            一个原子单位时间内迁移$\Gamma$次，则$\delta t$时间内从面1跳出的原子数为
+            $n_1\Gamma\delta t$。如果迁移方向是随机的，对于三维问题，则从晶面1迁移
+            到晶面2的概率就是$1/6$，在$\delta t$时间内从1跳到2的原子数为$\frac{1}{6}n_1\Gamma\delta t$，
+            同理从2跳到1的原子数为$\frac{1}{6}n_2\Gamma\delta t$，则面1到面2的净通量为
+            \begin{equation}
+                J=\frac{1}{6}(n_1-n_2)\Gamma\label{迁移通量与面密度关系},
+            \end{equation}
+            面密度和浓度的关系为
+            \begin{equation}
+                \frac{n}{\alpha}=c,
+            \end{equation}
+            因此净通量写作
+            \begin{equation}
+                J=\frac{1}{6}\alpha\left( c_1-c_2 \right)\Gamma.
+            \end{equation}
+            由于
+            \begin{equation}
+                \frac{\partial c}{\partial x}=\frac{c_2-c_1}{\alpha},
+            \end{equation}
+            得到
+            \begin{equation}
+                J=-\frac{1}{6}\alpha^2\Gamma\frac{\partial c}{\partial x},
+            \end{equation}
+            与Fick第一定律比较得到
+            \begin{equation}
+                D=\frac{1}{6}\alpha^2\Gamma\label{扩散系数与迁移率和迁移距离关系},
+            \end{equation}
+            可知扩散系数正比于迁移率和迁移距离的平方。
+            从以上的讨论也可以看出，决定迁移净通量的是不同原子面之间的面密度而不是浓度梯度。
+
+            对于fcc和hcp金属来说，在熔点附近的迁移率为\SI{1e8}{\s^{-1}}，但是实际上原子热振动频率为
+            \numrange{1e12}{1e13}，原子在平衡位置振动\numrange{1e4}{1e5}次才会成功跳离一次。
+
+            一般来说，迁移距离随温度的变化不大，这只和点阵类型和点阵常数有关系，扩散速率
+            与温度的关系主要取决于迁移率$\Gamma$，假设
+            \begin{equation}
+                \Gamma=Zp_v\omega,
+            \end{equation}
+            其中$Z$为配位数，$p_v$为近邻是空位置的几率，$\omega$原子迁入空位的频率，
+            代入\autoref{扩散系数与迁移率和迁移距离关系}可得
+            \begin{equation}
+                D=\frac{1}{6}\alpha^2Zp_v\omega.
+            \end{equation}
+
+    \section{扩散系数与浓度}
+        \subsection{Kirkendall效应}
+            这里不再叙述\href{http://www.phase-trans.msm.cam.ac.uk/kirkendall.html}{Kirkendall效应}\index{Kirkendall效应}的实验过程，
+            直接说明结论，对于由A、B两种原子组成的体系，$D_A>D_B$引起的\textbf{标记面}\index{Kirkendall效应!标记面}的移动称为Kirkendall效应。
+            其不可能使用原子交换机制进行迁移，因为如果扩散使用原子交换进行，对于任意平面来说，净通量
+            都为零。
+        \subsection{Darken公式}
+            A、B原子的百分比分别为$N_1=c_1/c$、$N_2=c_2/c$，扩散系数分别为$D_1$、$D_2$，
+            标记面移动速度为$V$，得出\textbf{Darken公式}\index{Darken公式}
+            \begin{align}
+                \widetilde{D}&=N_{2} D_{1}+N_{1} D_{2},\\
+                v&=\left(D_{2}-D_{1}\right) \frac{\partial N_{2}}{\partial x},\\
+                v&=\left(D_{1}-D_{2}\right) \frac{\partial N_{1}}{\partial x}
+            \end{align}
+            以上三式合称Darken公式。在一定浓度下测得化学扩散系数$\widetilde{D}$、标记面移动速度$V$
+            和浓度梯度，就可以确定该浓度下的\textbf{偏扩散系数}\index{偏扩散系数}$D_1$、$D_2$，它们是浓度梯度下
+            组元的扩散系数，称$\widetilde{D}$为\textbf{化学扩散系数}\index{Darken公式!化学扩散系数}或互扩散系数。
+
+        \subsection{总结}
+            目前已经接触了三个平面，分别是原始焊接平面（$S_0$）\index{原始焊接平面}，Matano面（$S_M$）\index{Matano面}
+            和标记面（$S_I$）\index{Kirkendall效应!标记面}，这里总结在不同条件下它们的相对位置的变化，
+            从而建立扩散过程中物质流动的明确图像。
+            \begin{itemize}
+                \item[1] 当$\frac{\dif c}{\dif t}=0$，且$D_1=D_2$时，$V=0$，所以$S_0=S_I$，而且$J_1=-J_2$，所以$S_0=S_M$，三个面重合；
+                \item[2] 当$\frac{\dif c}{\dif t}=0$，$D_1\neq D_2$时，$J_1\neq J_2$，$S_I\neq S_0$，但是$S_0=S_m$；
+                \item[3] 当$\frac{\dif c}{\dif t}\neq0$，$D_1=D_2$时，$S_0\neq S_M$，但是$S_I=S_M$；
+                \item[4] 当$\frac{\dif c}{\dif t}\neq0$，且$D_1\neq D_2$时，三个面均不相等。
+            \end{itemize}
+            总结一下，偏扩散系数相等时，标记面和Matano面相等；空间中浓度不随时间发生变化时，焊接面和Matano面相等。
+
+            关于Fick定律和Kirkendall效应有以下几点说明
+            \begin{itemize}
+                \item 每一种原子都有其自身的本征扩散系数；
+                \item 原子成功跃迁的几率依赖于结合键被拆断的难易程度，因此与金属的熔点有关；
+                \item 扩散的全部结论，或者说Fick定律中的扩散系数是不同种类原子本征扩散的综合作用的函数，即Darken公式；
+                \item 由于不同的本征扩散系数，Fick定律中的扩散系数是成分的函数。Matano面的构架是评价扩散系数对浓度的依赖性的一个方法；
+                \item 由于本征扩散系数不同，在扩散偶中存在空位的净通量。当两边的空位各自重新排列趋向平衡时，两边的合金就改变了相对体积。这引起了界面移动，即Kirkendall效应；
+                \item 跃迁频率和扩散系数之间的简单关系对自扩散是有效的，对稀固溶体是很好的近似。
+            \end{itemize}
+    \section{反应扩散}
+        在许多合金状态图中有中间相，因而扩散过程中也可能出现中间相，这种扩散即为\textbf{多相扩散}\index{多相扩散}。
+
+        多相扩散包括两个过程，分别是扩散过程和界面上达到一定的浓度发生化学反应，从而形成新相的过程。
+
+        通过扩散使固溶体内的溶质组元超过固溶度限而不断形成新相的过程就是\textbf{反应扩散}\index{反应扩散}由反应扩散所产生的新相，可以是新的固
+        溶体，也可以是化合物。
+
+        反应扩散的特点是在相界面处产生浓度突变，突变的浓度正好对应于相的极限溶解度。
+        根据相律关系，自由度$F$、族元数$C$和相数$P$关系为
+        \begin{equation}
+            F=C-P+2,
+        \end{equation}
+        但是在扩散过程中，温度和压力一定，因此应当去掉两个自由度，此时$F=C-P$，
+        \begin{itemize}
+            \item 单相情况下，$P=1$，$C=2$，于是$F=2-1=1$，说明该相的浓度是可以改变的，因此在扩散过程中可以有浓度梯度，即扩散过程可以发生；
+            \item 在双相去，$F=2-2=0$，意味着在双相区中，各相的浓度不能改变，它与状态图中的极限溶解度相对应，说明在两相区中不存在浓度梯度。
+        \end{itemize}
+        
+        \subsection{新相长大的动力学}
+            由纯金属A、B组成的扩散偶，在各自的\textbf{边际固溶体}\index{边际固溶体}中存在有
+            极限溶解度。经过时间$t$后的浓度分布曲线为
